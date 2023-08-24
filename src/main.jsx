@@ -4,10 +4,12 @@ import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TabsHeader from './components/Tabs/Tabs.jsx'
 import NavbarView from './components/Nav/Nav'
+import Footer from './components/Footer/Footer';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <TabsHeader />
     <NavbarView />
+    <Footer/>
   </React.StrictMode>,
 )

@@ -1,5 +1,7 @@
 .navbar-container{
     background-color: yellow;
+    border: 5px;
+    border-color: black;
 }
 
 .nav-container{

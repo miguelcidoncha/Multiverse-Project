@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Nav.css';
-import LogoMultiverse from '../../assets/img/Backgrounds/LogoMultiverse.png'
+import LogoMultiverse from '../../assets/img/Backgrounds/Multiverse-log-not-background.png'
 
 function NavbarView() {
   return (

@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import TabsHeader from './components/Tabs/Tabs.jsx'
+import NavbarView from './components/Nav/Nav'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <TabsHeader />
+    <NavbarView />
   </React.StrictMode>,
 )

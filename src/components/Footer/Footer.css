@@ -1,16 +1,29 @@
 .footer-container {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(https://res.cloudinary.com/dit2zhtwz/image/upload/v1692951783/4824751_hyuuri.jpg);
+    color: white;
+    border: solid 9px black;
+    height: 115px;
+    padding: 60px;
+    margin-top: 600px;
   }
   
-  .main-content {
+  .column {
     flex: 1;
+    padding: 10px;
+    font-size: 10px;
   }
   
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  /* Estilos para el footer inferior */
   .styled-footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 1rem;
+    margin-top: 20px;
   }

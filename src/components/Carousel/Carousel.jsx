@@ -13,13 +13,15 @@ import {
 
 const useStyles = createStyles((theme) => ({
   card: {
-    height: rem(440),
+    height: rem(450), 
+    width: rem(300),
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
     backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
   },
 
   title: {
@@ -59,7 +61,7 @@ function Card({ image, title, category }) {
         </Title>
       </div>
       <Button variant="white" color="dark">
-        Read article
+        Show More
       </Button>
     </Paper>
   );
@@ -68,17 +70,32 @@ function Card({ image, title, category }) {
 const data = [
     {
         image:
-          'https://res.cloudinary.com/duwenv0yr/image/upload/v1692949895/Venom_mg6ubh.jpg',
+          'https://res.cloudinary.com/duwenv0yr/image/upload/v1692949895/Venom.jpg',
         title: 'Venom',
-        category: 'Póster',
+        category: 'Poster',
       },
       {
         image:
           'https://res.cloudinary.com/duwenv0yr/image/upload/v1692949939/Invencible_was8bi.jpg',
         title: 'Invencible',
-        category: 'Cómic',
+        category: 'Comic',
       },
-      
+      {
+        image:
+          'https://res.cloudinary.com/duwenv0yr/image/upload/v1692949958/FunkoSpiderman.png',
+        title: 'Funko Pop Spiderman',
+        category: 'Funko Pops',
+      },  {
+        image:
+          'https://res.cloudinary.com/duwenv0yr/image/upload/v1692955083/cami_one_2-removebg-preview_hhwjnb.png',
+        title: 'One Piece',
+        category: 'Shirts',
+      }, {
+        image:
+          'https://res.cloudinary.com/duwenv0yr/image/upload/v1692955148/The_Witcher_qqbxel.jpg',
+        title: 'The Witcher',
+        category: 'Poster',
+      },     
 ];
 
 function NewCarousel() {

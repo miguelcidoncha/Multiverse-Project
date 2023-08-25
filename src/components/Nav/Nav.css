@@ -1,8 +1,12 @@
 .navbar-container{
     background-color: yellow;
+    border: 9px black solid;;
+    
 }
 
 .nav-container{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  ;
+    font-size: 28.5px ;
     color: black;
 }
 

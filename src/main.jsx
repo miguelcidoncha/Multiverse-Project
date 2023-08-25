@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TabsHeader from './components/Tabs/Tabs.jsx'
 import NavbarView from './components/Nav/Nav'
 import NewCarousel from './components/Carousel/Carousel';
+import Footer from './components/Footer/Footer';
 // import Cards from './components/Cards/Cards';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -13,5 +14,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <NavbarView />
     <NewCarousel />
     {/* <Cards /> */}
+    <Footer />
   </React.StrictMode>,
 )

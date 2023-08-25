@@ -11,6 +11,8 @@ import {
   rem,
 } from '@mantine/core';
 
+
+
 const useStyles = createStyles((theme) => ({
   card: {
     height: rem(500),
@@ -22,6 +24,7 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
+    fontFamily: 'ActionComicsBlack',
     
   },
 
@@ -32,6 +35,7 @@ const useStyles = createStyles((theme) => ({
     lineHeight: 1.2,
     fontSize: rem(32),
     marginTop: theme.spacing.xs,
+    textShadow: '0 0 20px black',
   },
 
   category: {
@@ -44,8 +48,10 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     margin: `0 ${theme.spacing.md}`, 
+    marginRight: '0',
+    marginLeft: '0',
     position: 'relative', 
-    background: 'url(https://res.cloudinary.com/duwenv0yr/image/upload/v1692955753/Background_Banner_f7uic0.jpg) center/cover no-repeat', // Establece el fondo deseado
+    background: 'url(https://res.cloudinary.com/duwenv0yr/image/upload/v1692955753/Background_Banner_f7uic0.jpg) center/cover no-repeat', 
     padding: theme.spacing.xl, 
   },
 
@@ -60,9 +66,9 @@ function Card({ image, title, category }) {
 
   return (
     <Paper
-      shadow="md"
+      shadow="lg"
       p="xl"
-      radius="md"
+      radius="lg"
       sx={{ backgroundImage: `url(${image})` }}
       className={classes.card}
     >
@@ -96,10 +102,22 @@ const data = [
       },
       {
         image:
-          'https://res.cloudinary.com/duwenv0yr/image/upload/v1692949939/Invencible.jpg',
-        title: 'Invencible',
+          'https://res.cloudinary.com/duwenv0yr/image/upload/v1692962148/Civil_War_wxuewd.jpg',
+        title: 'Civil War',
+        category: 'Poster',
+      },{
+        image:
+          'https://res.cloudinary.com/duwenv0yr/image/upload/v1692955148/The_Witcher_qqbxel.jpg',
+        title: 'The Witcher',
+        category: 'Poster',
+      },
+      {
+        image:
+          'https://res.cloudinary.com/duwenv0yr/image/upload/v1692962030/Batman_njnthf.jpg',
+        title: 'Batman',
         category: 'Comic',
       },
+      
 ];
 
 function NewCarousel() {
@@ -116,11 +134,11 @@ function NewCarousel() {
     <div className={classes.carouselContainer}>
     <div className={classes.cardContainer}>
     <Carousel
-      slideSize={mobile ? '100%' : '33.33%'}
+      slideSize={mobile ? '100%' : '25%'}
       breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
       slideGap="xs"
       align="center"
-      slidesToScroll={3}
+      slidesToScroll={1}
     >
       {slides}
     </Carousel>

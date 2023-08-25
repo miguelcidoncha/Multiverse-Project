@@ -2,13 +2,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Nav.css';
-import LogoMultiverse from '../../assets/img/Backgrounds/LogoMultiverse.png'
 
 function NavbarView() {
   return (
     <Navbar expand="lg" className="navbar-container">
       <Container className='nav-container'>
-        <Navbar.Brand href="#home"><img src={LogoMultiverse} alt='Logo Multiverse' className='MultiverseLogo'></img></Navbar.Brand>
+        <Navbar.Brand href="#home">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

@@ -1,25 +1,29 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import './Tabs.css';
 
 function TabsHeader() {
   return (
     <Tabs
-      defaultActiveKey="profile"
+      defaultActiveKey="home"
       id="fill-tab-example"
       className="mb-3"
-      fill
+      // fill
     >
       <Tab eventKey="home" title="Home">
-        Tab content for Home
+       
       </Tab>
-      <Tab eventKey="profile" title="Profile">
-        Tab content for Profile
+      <Tab eventKey="profile" title="Registro/Profile">
+      
       </Tab>
-      <Tab eventKey="longer-tab" title="Loooonger Tab">
-        Tab content for Loooonger Tab
+      <Tab eventKey="longer-tab" title="❤️">
+        
       </Tab>
-      <Tab eventKey="contact" title="Contact" disabled>
-        Tab content for Contact
+      <Tab eventKey="contact" title="😁😎🤩" >
+     
+      </Tab>
+      <Tab eventKey="Carrito" title="🛒" >
+
       </Tab>
     </Tabs>
   );

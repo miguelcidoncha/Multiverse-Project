@@ -1,3 +1,12 @@
+@font-face {
+  font-family:'arcade';
+  src: url(/fonts/arcade-ka1.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'spiderman';
+  src: url(/fonts/The\ Amazing\ Spider-Man.ttf) format('truetype');
+}
 .background-body{
   border-left: 9px black solid;
   border-right: 9px black solid;
@@ -10,10 +19,11 @@
   height: 40px;
   width: 100%;
   background-color: white;
+  font-family:'arcade' ;
   color: blue;
   text-align: center;
   font-size: 30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
 }
 
 #new{
@@ -21,6 +31,7 @@
 }
 
 #sold{
+  font-family:'spiderman';
   margin-top: 200px;
 }
 

@@ -5,3 +5,39 @@
   background-size: cover;
   height: 100rem;
 }
+
+.subtitle{
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  color: blue;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#new{
+  margin-top: 0px;
+}
+
+#sold{
+  margin-top: 200px;
+}
+
+#add{
+  height: 200px;
+  width: 100%;
+  background-color: white;
+  margin-top: 400px;
+}
+
+h2{
+  text-align: center;
+  color: blue;
+}
+
+#advenger{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}

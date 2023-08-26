@@ -7,7 +7,7 @@ function MainBody() {
     {/* <div>.</div> */}
     <div className='subtitle' id='new'>Novedades</div>
     <Cards />
-    <div className='subtitle' id='sold'>Lo más vendido</div>
+    <div className='subtitle' id='sold'>Lo mas vendido</div>
     <div id='add'>
         <h2>¡Mola ser friki!</h2>
     </div>

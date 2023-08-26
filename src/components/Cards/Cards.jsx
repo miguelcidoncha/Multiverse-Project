@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
@@ -43,12 +43,12 @@ function Cards() {
     return (
         <Row xs={1} md={2} className="g-4 justify-content-center">
             {cardsData.map((card, idx) => (
-                <Col key={idx} style={{ width: '200px', height:'200px'}}>
+                <Col key={idx} style={{ width: '200px'}}>
                     <Card>
                         <Card.Img variant="top" src={card.image} />
-                        <Card.Body>
-                            <Card.Title>{card.title}</Card.Title>
-                            <Card.Text>{card.description}</Card.Text>
+                        <Card.Body style={{fontSize:'12px'}}>
+                            <Card.Title style={{fontSize:'15px'}} >{card.title}</Card.Title>
+                            <Card.Text style={{minHeight:'140px'}} >{card.description}</Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>

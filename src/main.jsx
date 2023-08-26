@@ -7,6 +7,7 @@ import NavbarView from './components/Nav/Nav.jsx'
 import MainBody from './components/Mainbody/Mainbody';
 // import Cards from './components/Cards/Cards';
 import Footer from './components/Footer/Footer.jsx';
+import NewCarousel from './components/Carousel/Carousel';
 
 
 
@@ -15,7 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <TabsHeader />
     <NavbarView />
+    <NewCarousel/>
     <MainBody />
+
     {/* <Cards /> */}
     <Footer />
   </React.StrictMode>,

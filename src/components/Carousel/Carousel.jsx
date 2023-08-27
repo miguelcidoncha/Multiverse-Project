@@ -1,4 +1,4 @@
-// import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -7,7 +7,7 @@ import './Carousel.css';
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-function NewCarousel() {
+function Carousel() {
   return (
     <>
       <Swiper 
@@ -52,4 +52,4 @@ function NewCarousel() {
   );
 }
 
-export default NewCarousel;
+export default Carousel;

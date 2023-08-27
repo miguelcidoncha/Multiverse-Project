@@ -2,24 +2,34 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import TabsHeader from './components/Tabs/Tabs.jsx'
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import Registro from './components/Registro/Registro';
+import Carrito from './components/Carrito/Carrito'
 import NavbarView from './components/Nav/Nav.jsx'
-import MainBody from './components/Mainbody/Mainbody';
-// import Cards from './components/Cards/Cards';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer.jsx';
 import NewCarousel from './components/Carousel/Carousel';
 
 
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <TabsHeader />
-    <NavbarView />
-    <NewCarousel/>
-    <MainBody />
+    
+    <BrowserRouter>
 
-    {/* <Cards /> */}
-    <Footer />
+      <Header />
+      <NavbarView />
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} /> 
+          <Route path="/registro" element={<Registro />} /> 
+          <Route path="/carrito" element={<Carrito/>} />
+        </Routes>
+      </div>
+
+      <Footer />
+
+    </BrowserRouter>
   </React.StrictMode>,
 )

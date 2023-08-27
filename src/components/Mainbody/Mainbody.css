@@ -3,10 +3,11 @@
   src: url(/fonts/arcade-ka1.ttf) format('truetype');
 }
 
-@font-face {
+/* @font-face {
   font-family: 'spiderman';
   src: url(/fonts/The\ Amazing\ Spider-Man.ttf) format('truetype');
-}
+} */
+
 .background-body{
   border-left: 9px black solid;
   border-right: 9px black solid;
@@ -31,15 +32,16 @@
 }
 
 #sold{
-  font-family:'spiderman';
-  margin-top: 200px;
+  font-family:'arcade';
+  margin-top: 70px;
 }
 
 #add{
   height: 200px;
   width: 100%;
   background-color: white;
-  margin-top: 400px;
+  margin-top: 350px;
+  font-family: fantasy;
 }
 
 h2{
@@ -50,5 +52,5 @@ h2{
 #advenger{
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }

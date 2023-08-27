@@ -10,11 +10,15 @@ function TabsHeader() {
       className="mb-3"
       // fill
     >
-      <Tab eventKey="home" title="Home">
-       
+{/* <div>
+  <img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1692957145/LogoMultiverse_qop0xe.png" alt="logo" />
+</div> */}
+
+      <Tab eventKey="home2" title="Home">
+
       </Tab>
       <Tab eventKey="profile" title="Registro/Profile">
-      
+
       </Tab>
       <Tab eventKey="longer-tab" title="❤️">
         

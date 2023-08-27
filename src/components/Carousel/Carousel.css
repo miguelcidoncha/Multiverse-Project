@@ -3,15 +3,17 @@ html,
 body {
   position: relative;
   height: 100%;
+ 
 }
 
 body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: #000000;
+  font-family: Helvetica, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   color: #000;
-  margin: 0 0 0 0;
-  padding: 0;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  
 }
 
 .swiper {
@@ -22,6 +24,7 @@ body {
   background-image: url(https://res.cloudinary.com/duwenv0yr/image/upload/v1692955753/Background_Banner_f7uic0.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .swiper-slide {
@@ -29,6 +32,7 @@ body {
   background-size: cover;
   width: 12.5rem;
   height: auto;
+  
 }
 
 .customSlide {
@@ -38,4 +42,5 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
+  border: 9px black;
 }

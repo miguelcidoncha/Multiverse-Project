@@ -9,7 +9,6 @@ import Carrito from './components/Carrito/Carrito'
 import NavbarView from './components/Nav/Nav.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer.jsx';
-import NewCarousel from './components/Carousel/Carousel';
 
 
 
@@ -20,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
       <Header />
       <NavbarView />
+      
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} /> 

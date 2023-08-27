@@ -1,58 +1,21 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PersonIcon from '@mui/icons-material/Person';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles((theme) => ({
-  header: {
-    height: 50,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  logo: {
-    marginRight: theme.spacing(2),
-  },
-  links: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  link: {
-    marginLeft: theme.spacing(2),
-  },
-}));
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 const Header = () => {
-  const classes = useStyles();
-
   return (
-    <AppBar position="static">
-      <Toolbar className={classes.header}>
-        <Typography variant="h6" component="div" className={classes.logo}>
-          Logo
-        </Typography>
-        <div className={classes.links}>
-          <Button color="inherit" className={classes.link}>
-            Inicio
-          </Button>
-          <Button color="inherit" className={classes.link}>
-            Registro
-          </Button>
-          <Button color="inherit" className={classes.link}>
-            <PersonIcon />
-            Usuario
-          </Button>
-          <Button color="inherit" className={classes.link}>
-            <ShoppingCartIcon />
-            Carrito
-          </Button>
+    <header>
+      <nav className='headerNav'>
+        <div className='logo'>
+            <img src='https://res.cloudinary.com/dit2zhtwz/image/upload/v1693134536/MULTIVERSE__1_-removebg-preview_tw4twh.png'></img>
         </div>
-      </Toolbar>
-    </AppBar>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/registro"><i class="fas fa-user-secret"></i></Link></li> 
+          <li><Link to="/carrito">🛒</Link></li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

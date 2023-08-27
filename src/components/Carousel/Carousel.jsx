@@ -7,7 +7,7 @@ import './Carousel.css';
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-function NewCarousel() {
+function Carousel() {
   return (
     <>
       <Swiper 
@@ -52,4 +52,4 @@ function NewCarousel() {
   );
 }
 
-export default NewCarousel;
+export default Carousel;

@@ -3,11 +3,6 @@
   src: url(/fonts/arcade-ka1.ttf) format('truetype');
 }
 
-/* @font-face {
-  font-family: 'spiderman';
-  src: url(/fonts/The\ Amazing\ Spider-Man.ttf) format('truetype');
-} */
-
 .background-body{
   border-left: 9px black solid;
   border-right: 9px black solid;

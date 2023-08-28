@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
-import Home from './components/Home/Home';
+import Home from './views/Home/Home';
 import Registro from './components/Registro/Registro';
 import Carrito from './components/Carrito/Carrito'
 import NavbarView from './components/Nav/Nav.jsx'

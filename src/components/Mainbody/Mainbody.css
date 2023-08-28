@@ -1,0 +1,52 @@
+@font-face {
+  font-family:'arcade';
+  src: url(/fonts/arcade-ka1.ttf) format('truetype');
+}
+
+
+.background-body{
+  border-left: 9px black solid;
+  border-right: 9px black solid;
+  background-image: url(https://res.cloudinary.com/dbvqy3wft/image/upload/v1692951841/Background-Black-white_tn8o2f.jpg);
+  background-size: cover;
+  height: 100rem;
+}
+
+.subtitle{
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  font-family:'arcade' ;
+  color: blue;
+  text-align: center;
+  font-size: 30px;
+ 
+}
+
+#new{
+  margin-top: 0px;
+}
+
+#sold{
+  font-family:'arcade';
+  margin-top: 70px;
+}
+
+#add{
+  height: 200px;
+  width: 100%;
+  background-color: white;
+  margin-top: 350px;
+  font-family: fantasy;
+}
+
+h2{
+  text-align: center;
+  color: blue;
+}
+
+#advenger{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}

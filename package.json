@@ -10,12 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fluentui/react-components": "^9.30.0",
+    "@nextui-org/react": "^2.1.5",
+    "@nextui-org/system": "^2.0.5",
+    "@nextui-org/theme": "^2.1.2",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
+    "embla-carousel-react": "^8.0.0-rc12",
+    "framer-motion": "^10.16.1",
     "json-server": "^0.17.3",
+    "primereact": "^9.6.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

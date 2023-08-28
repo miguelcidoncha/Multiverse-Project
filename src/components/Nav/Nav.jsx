@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,12 +11,12 @@ function NavbarView() {
       <Container className='nav-container'>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>
-          <Nav style={{marginInline:'auto'}}>
-            <Nav.Link href="#comics">Cómics</Nav.Link>
-            <Nav.Link href="#figuras">Figuras</Nav.Link>
-            <Nav.Link href="#funkopops">Funko Pops</Nav.Link>
-            <Nav.Link href="#posters">Pósters</Nav.Link>
-            <Nav.Link href="#camisetas">Camisetas</Nav.Link>
+          <Nav style={{ marginInline: 'auto' }}>
+            <Nav.Link as={Link} to="/comics">Cómics</Nav.Link>
+            <Nav.Link as={Link} to="/figuras">Figuras</Nav.Link>
+            <Nav.Link as={Link} to="/funkos">Funko Pops</Nav.Link>
+            <Nav.Link as={Link} to="/posters">Pósters</Nav.Link>
+            <Nav.Link as={Link} to="/shirts">Camisetas</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -23,4 +25,6 @@ function NavbarView() {
 }
 
 export default NavbarView;
+
+
 

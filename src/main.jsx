@@ -7,11 +7,12 @@ import "primereact/resources/primereact.min.css";
 import TabsHeader from './components/Tabs/Tabs.jsx'
 import NavbarView from './components/Nav/Nav.jsx'
 import NewCarousel from './components/Carousel/Carousel';
-import Stars from './components/Rating/Rating';
+// import Stars from './components/Rating/Rating';
+// import Avatars from './components/Avatars/Avatar';
 // import MainBody from './components/Mainbody/Mainbody';
 // import Cards from './components/Cards/Cards';
 import Footer from './components/Footer/Footer.jsx';
-import Avatars from './components/Avatars/Avatar';
+
 
 
 
@@ -22,8 +23,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <TabsHeader />
     <NavbarView />
     <NewCarousel />
-    <Avatars />
-    <Stars />
+    {/* <Avatars /> */}
+    {/* <Stars /> */}
     {/* <MainBody /> */}
     {/* <Cards /> */}
     <Footer />

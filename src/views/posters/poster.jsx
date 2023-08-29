@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Posters = () => {
+const Poster = () => {
     return (
       <div>
        
@@ -11,4 +11,4 @@ const Posters = () => {
     );
   };
   
-  export default Posters;
+  export default Poster;

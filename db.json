@@ -1,0 +1,19 @@
+{
+  "Cards": [
+
+    {
+    "Foto": "https://cdn.pixabay.com/photo/2023/01/21/15/06/ai-generated-7734186_640.jpg",
+    "Description": "Pintura 1",
+    "Precio": "1000",
+    "Tipo": "Pintura",
+    "id": 17
+  },
+  {
+    "Foto": "https://cdn.pixabay.com/photo/2023/08/06/13/11/ai-generated-8172924_640.jpg",
+    "Description": "Escultura 1",
+    "Precio": "500",
+    "Tipo": "Escultura",
+    "id": 27
+  }
+  ]
+}

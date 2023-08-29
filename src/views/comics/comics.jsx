@@ -1,14 +1,22 @@
-import React from 'react';
+// import React from 'react';
 
 
-const Comics = () => {
-    return (
-      <div>
+// const Comics = () => {
+//     return (
+//       <div>
        
-        <h1>Comics:</h1>
+//         <h1>Comics:</h1>
         
-      </div>
-    );
-  };
+//       </div>
+//     );
+//   };
   
-  export default Comics;
+//   export default Comics;
+
+
+
+
+
+
+
+

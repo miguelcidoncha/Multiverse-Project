@@ -5,13 +5,13 @@
     border: 7px solid rgba(0, 0, 0, 0.7);
     border-radius: 50px;
     padding: 17px;
-    /* background: linear-gradient(to bottom, #fd4fa6, #2e07a3); */
+    
     background: linear-gradient(to bottom, rgba(253, 79, 166, 0.7), rgba(61, 6, 226, 0.7));
   }
 
   .button-buy{
-    background-color: #3c92fa; /* Cambia al color deseado para el botón */
-  color: white; /* Color del texto del botón */
+    background-color: #3c92fa; 
+  color: white; 
   padding: 10px 20px;
   border:none;
   border-radius: 8px;

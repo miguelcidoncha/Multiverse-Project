@@ -78,6 +78,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Header />
       <NavbarView />
+      
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />

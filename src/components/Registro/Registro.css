@@ -1,3 +1,45 @@
-.content[data-reach-route="/registro"] {
-    background-color: white;
-  }
+#background {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+.card-customer {
+  width: 280px; /* Tamaño cuadrado */
+  height: 520px; /* Tamaño cuadrado */
+  border: 1px solid #000000;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #fff;
+  display: flex; /* Activa el flexbox para alinear los elementos internos */
+  flex-direction: column; /* Alinea los elementos en columna */
+  justify-content: space-between; /* Espacio uniforme entre los elementos */
+  text-align: center;
+  margin-top: 5px;
+}
+.card-customer-group {
+  display: flex;
+  margin: 10px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+.delete-button,
+.add-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.delete-button:hover,
+.add-button:hover {
+  background-color: #ccc;
+}

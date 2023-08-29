@@ -1,22 +1,5 @@
-// import React from 'react';
-
-// const Registro = () => {
-//     return (
-//       <div>
-       
-//        <h1>Registro </h1>
-//       </div>
-//     );
-//   };
-  
-//   export default Registro;
-
-
-
-
-
 import CardsHandler from '../../Handler/Cardshandler';
-// import "../WheelOfDoom/WheelOfDoom.css";
+import './registro.css';
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
@@ -32,18 +15,18 @@ export default function Registro() {
   };
   const handlerAdd = async () => {
     try {
-      // Datos del nuevo elemento a agregar (reemplaza con los valores adecuados)
+     
       const newCardCustomer = {
-        Foto: 'https://cdn.pixabay.com/photo/2016/04/01/09/34/american-1299445_640.png',
-        Description: 'Escultura 2',
-        Precio: '2000',
-        Tipo: 'Escultura',
+        Foto: 'https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png',
+        Description: 'Funko',
+        Precio: '16',
+        Tipo: 'Funko Pops',
       };
-      // Realizar la solicitud POST para agregar el elemento a la base de datos (API)
+      
       const response = await axios.post('http://localhost:3000/Cards', newCardCustomer);
-      // Obtener el nuevo elemento con el ID generado automáticamente por el servidor
+      
       const addedCardCustomer = response.data;
-      // Actualizar el estado local para reflejar los cambios
+      
       setcardCustomer([...cardCustomer, addedCardCustomer]);
     } catch (error) {
       console.error('Error al agregar:', error);
@@ -60,14 +43,14 @@ export default function Registro() {
   };
   return (
     <main id="background">
-      <div id="art-customer-container">
+      <div id="card-customer-container">
         {Array.from({ length: Math.ceil(cardCustomer.length / 5) }).map(
           (_, rowIndex) => (
-            <div key={rowIndex} className="art-customer-group">
+            <div key={rowIndex} className="card-customer-group">
               {cardCustomer
                 .slice(rowIndex * 5, (rowIndex + 1) * 5)
                 .map((item) => (
-                  <div key={item.id} className="art-customer">
+                  <div key={item.id} className="card-customer">
                     <div>
                     <img src={item.Foto} alt="Imagen de arte" width={250} height={315}/>
                     </div>

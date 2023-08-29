@@ -1,0 +1,25 @@
+  .card{
+    color: white;
+    width: 230px;
+    height: 460px;
+    border: 7px solid rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+    padding: 17px;
+    background: linear-gradient(to bottom, #fd4fa6, #2e07a3);
+  }
+
+  .button-buy{
+    background-color: #3c92fa; /* Cambia al color deseado para el botón */
+  color: white; /* Color del texto del botón */
+  padding: 10px 20px;
+  border:none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(153, 152, 152, 0.4); /* Aquí está la sombra */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .button-buy:hover {
+    transform: scale(1.30); /* Efecto de escala al pasar el cursor sobre el botón */
+    box-shadow: 4px 4px 6px rgba(153, 152, 152, 0.4); /* Cambia la sombra al pasar el cursor */
+  }

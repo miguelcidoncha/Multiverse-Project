@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "type": "Funko",
+      "name": "Batman",
+      "price": 16,
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png"
+    },
+    {
+      "id": 2,
+      "type": "Camiseta",
+      "name": "Esqueleto",
+      "price": 18,
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322664/cami_one_2_nq74c8.png"
+    }
+  ]
+}

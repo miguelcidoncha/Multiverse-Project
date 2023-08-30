@@ -1,73 +1,155 @@
-// import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Cards from '../NewCards/Cards';
+import { Container, Form, Modal, Row } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 
-export default function Registro() {
-  const [cardCustomer, setcardCustomer] = useState([]);
-  useEffect(() => {
-    getData();
-  }, []);
-  const getData = async () => {
-    const data = await CardsHandler.loadCards();
-    setcardCustomer(data);
-  };
-  const handlerAdd = async () => {
-    try {
-     
-      const newCardCustomer = {
-        Foto: 'https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png',
-        Description: 'Funko',
-        Precio: '16',
-        Tipo: 'Funko Pops',
-      };
-      
-      const response = await axios.post('http://localhost:3000/Cards', newCardCustomer);
-      
-      const addedCardCustomer = response.data;
-      
-      setcardCustomer([...cardCustomer, addedCardCustomer]);
-    } catch (error) {
-      console.error('Error al agregar:', error);
+const Registro = () => {
+
+    const URL = " http://localhost:3000/products"
+    
+    const getData = async () => {
+      const response = axios.get(URL);
+      return response;
     }
-  };
-  const handleDelete = async (id) => {
-    try {
-      await axios.delete(`http://localhost:3000/Cards/${id}`);
-      const updatedCardCustomer = cardCustomer.filter((item) => item.id !== id);
-      setcardCustomer(updatedCardCustomer);
-    } catch (error) {
-      console.error('Error al eliminar:', error);
+
+    const [list, setList] = useState([])
+    const [updateList, setUpdateList] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [dataModal, setDataModal] = useState({})
+    
+    const handleCloseModal = () => {setShowModal(false)}
+    const handleOpenModal = () => {setShowModal(true)}
+
+    const handleChangeModal = ({target}) => {
+        setDataModal({
+            ...dataModal,
+            [target.name]: target.value
+        })
     }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const response = await axios.put(`${URL}/${dataModal.id}`, dataModal)
+        if (response.status === 200) {
+            Swal.fire(
+                'Guardado!',
+                `El registro ${response.data.type} ha sido actualizado exitosamente!`,
+                'success'
+            )
+            handleCloseModal();
+            setUpdateList(!updateList)
+        }else {
+            Swal.fire(
+                'Error!',
+                'Hubo un problema al actualizar el registro!',
+                'error'
+            )
+        }
+    }
+
+
+    useEffect(() => {
+      getData().then((response) => {
+        setList(response.data);
+      })
+    }, [updateList]) 
+      
+    
+
+    return (
+      <Container className='mb-5 mt-5'>
+        <Row>
+           {
+        list.map((products,index) => (
+          <Cards 
+          key={index}
+          products={products}
+          setUpdateList={setUpdateList}
+          updateList={updateList}
+          handleCloseModal= {handleCloseModal}
+          handleOpenModal = {handleOpenModal}
+          setDataModal= {setDataModal}
+          />
+        ))
+           }
+           
+        </Row>
+        
+        <Modal show={showModal} onHide={handleCloseModal}>
+    <Modal.Header>
+        <Modal.Title>Actualizar Datos</Modal.Title>
+    </Modal.Header>
+
+    <Form onSubmit={handleSubmit}>
+        <Modal.Body>
+            <Form.Group className="mb-3">
+                <select 
+                    className="form-control"
+                    name="type"
+                    onChange={handleChangeModal}
+                    required
+                >
+                    <option value="">Selecciona una opción</option>
+                    <option value="Funko">Funko Pop</option>
+                    <option value="Camiseta">Camiseta</option>
+                    <option value="Camiseta">Figura</option>
+                    <option value="Camiseta">Poster</option>
+                    <option value="Camiseta">Comic</option>
+                </select>
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+                <Form.Label>Referencia</Form.Label>
+                <Form.Control
+                    type="text"
+                    name="name"
+                    placeholder="Nombre"
+                    value={dataModal.name} 
+                    onChange={handleChangeModal}
+                    required
+                />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+                <Form.Control
+                    type="number"
+                    name="price"
+                    placeholder="Precio"
+                    value={dataModal.price} 
+                    onChange={handleChangeModal}
+                    required
+                />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+                <Form.Control
+                    type="text"
+                    name="image"
+                    placeholder="URL de la imagen"
+                    value={dataModal.image} 
+                    onChange={handleChangeModal}
+                    required
+                />
+            </Form.Group>
+        </Modal.Body>
+
+        <Modal.Footer>
+            <button className="btn btn-secondary" type="reset" onClick={handleCloseModal}>Cancelar</button>
+            <button className="btn btn-success mb-3">Guardar</button>
+        </Modal.Footer>
+    </Form>
+</Modal>
+      </Container>
+    );
   };
-  return (
-    <main id="background">
-      <div id="card-customer-container">
-        {Array.from({ length: Math.ceil(cardCustomer.length / 5) }).map(
-          (_, rowIndex) => (
-            <div key={rowIndex} className="card-customer-group">
-              {cardCustomer
-                .slice(rowIndex * 5, (rowIndex + 1) * 5)
-                .map((item) => (
-                  <div key={item.id} className="card-customer">
-                    <div>
-                    <img src={item.Foto} alt="Imagen de arte" width={250} height={315}/>
-                    </div>
-                    <h2>{item.Description}</h2>
-                    <p><strong>Precio:</strong> {item.Precio}</p>
-                    <p><strong>Tipo:</strong> {item.Tipo}</p>
-                    <div className="button-container">
-                    <button className="delete-button" onClick={() => handleDelete(item.id)}>
-                        <img width={30} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLsJK7RvQtvRfpAW04KrAo7wBvW_7W9qhUqIgC8fYgtfjrSLRC5aXDjuwXRirrWxllkak&usqp=CAU" alt="Eliminar" />
-                    </button>
-                    <button className="add-button" onClick={handlerAdd}>
-                    <img width={30} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfj4CtfwLAx0n7ZfQWG08dsI7B6tRiYlabiUteYJU&s" alt="Agregar" />
-                    </button>
-                    </div>
-                  </div>
-                ))}
-            </div>
-          )
-        )}
-      </div>
-    </main>
-  );
-}
+  
+  export default Registro;
+
+
+
+
+
+
+

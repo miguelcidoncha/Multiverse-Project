@@ -1,11 +1,11 @@
-import { Service } from "../Service/service";
+// import { Service } from "../Service/service";
 
-export const CardsHandler = {
+// export const CardsHandler = {
     
-        loadCards(){
-            return Service.getAllCards();
-        }
+//         loadCards(){
+//             return Service.getAllCards();
+//         }
        
-    }
+//     }
     
-    export default CardsHandler;
+//     export default CardsHandler;

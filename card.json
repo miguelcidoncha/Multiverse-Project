@@ -9,9 +9,9 @@
     },
     {
       "id": 2,
-      "type": "Camiseta",
+      "type": "Figura",
       "name": "Hulk",
-      "price": "25",
+      "price": "26",
       "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg"
     }
   ]

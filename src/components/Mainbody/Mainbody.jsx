@@ -6,8 +6,11 @@ function MainBody() {
 <div className="background-body">
  
     <div className='subtitle' id='new'>Novedades</div>
-    <Cards />
+    <br />
+    <Cards/>
     <div className='subtitle' id='sold'>¡Lo mas vendido!</div>
+    <br />
+    <Cards/>
     <div id='add'>
         <h2>¡Mola ser friki!</h2>
         

@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "type": "Funko",
+      "name": "Batman",
+      "price": "22",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png"
+    },
+    {
+      "id": 2,
+      "type": "Figura",
+      "name": "Hulk",
+      "price": "20",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg"
+    },
+    {
+      "id": 3,
+      "type": "Camiseta",
+      "name": "Esqueleto",
+      "price": "35",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322664/cami_one_2_nq74c8.png"
+    }
+  ]
+}

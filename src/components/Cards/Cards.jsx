@@ -163,11 +163,11 @@ function Cards() {
               <Card.Title>{product.title}</Card.Title>
               <Card.Text>{product.description}</Card.Text>
               <Button className='button-buy' variant="primary">Buy Now</Button>{' '}
-              <Button className=''
+              <Button className='button-like' 
                   variant="link"
                   style={{
                     color: likedProducts[idx] ? 'red' : 'white', // Cambiar colores aquí
-                  }}
+                                }}
                   onClick={() => handleLikeClick(idx)}
             
                 >

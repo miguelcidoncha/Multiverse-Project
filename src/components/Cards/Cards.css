@@ -24,3 +24,9 @@
     transform: scale(1.30); /* Efecto de escala al pasar el cursor sobre el botón */
     box-shadow: 4px 4px 6px rgba(153, 152, 152, 0.4); /* Cambia la sombra al pasar el cursor */
   }
+
+
+  /* .button-like{
+    width: 25px;
+    height: 50px;
+  } */

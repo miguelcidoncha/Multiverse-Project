@@ -7,7 +7,7 @@ import axios from "axios";
 const Cards = ({products, setUpdateList, updateList, handleCloseModal, handleOpenModal, setDataModal}) => {
 
 
-    const URL = "http://localhost:3001/products"
+    const URL = " http://localhost:3000/products"
 
     const handleDelete = async () => {
 

@@ -13,6 +13,34 @@
       "price": "-5",
       "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
       "id": 3
+    },
+    {
+      "type": "Figura",
+      "name": "lauris",
+      "price": "7",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
+      "id": 4
+    },
+    {
+      "type": "Funko",
+      "name": "REBECA",
+      "price": "5",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
+      "id": 5
+    },
+    {
+      "type": "Funko",
+      "name": "Rebeca Poma",
+      "price": "11",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
+      "id": 6
+    },
+    {
+      "type": "Figura",
+      "name": "lauris amore",
+      "price": "11",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
+      "id": 7
     }
   ]
 }

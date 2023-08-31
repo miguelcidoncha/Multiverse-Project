@@ -1,13 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "type": "Funko",
-      "name": "Batman",
-      "price": "26",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png"
-    },
-    {
       "id": 2,
       "type": "Figura",
       "name": "Hulk",
@@ -15,11 +8,11 @@
       "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg"
     },
     {
-      "id": 3,
       "type": "Camiseta",
-      "name": "Naruto",
-      "price": "13",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322638/Naruto_jhomgv.png"
+      "name": "ssss",
+      "price": "-5",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
+      "id": 3
     }
   ]
 }

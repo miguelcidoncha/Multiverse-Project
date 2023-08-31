@@ -13,6 +13,13 @@
       "name": "Hulk",
       "price": "26",
       "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg"
+    },
+    {
+      "id": 3,
+      "type": "Camiseta",
+      "name": "Naruto",
+      "price": "13",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322638/Naruto_jhomgv.png"
     }
   ]
 }

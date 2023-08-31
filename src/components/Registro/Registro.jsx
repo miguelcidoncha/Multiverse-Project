@@ -3,6 +3,7 @@ import axios from 'axios';
 import Cards from '../NewCards/Cards';
 import { Container, Form, Modal, Row } from 'react-bootstrap';
 import Swal from 'sweetalert2';
+import '../Registro/Registro.css'
 
 
 const Registro = () => {

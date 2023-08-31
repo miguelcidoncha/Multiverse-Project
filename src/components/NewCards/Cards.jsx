@@ -1,5 +1,6 @@
 import React from "react";
-import '../../views/comics/comics.css'
+// import '../../views/comics/comics.css'
+import '../NewCards/Cards.css'
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -55,7 +56,7 @@ const Cards = ({products, setUpdateList, updateList, handleCloseModal, handleOpe
         <div className="col-4 mb-3">
             <Card>
                 <img src={products.image} alt={products.type} className="card-img-top image-card"/>
-                <Card.Body >
+                <Card.Body className="car-body">
                     <Card.Title className="text-center">{products.type}</Card.Title>
                     <ListGroup className="mb-2 mx-5">
                         <ListGroupItem><strong>Nombre:</strong>{products.name}</ListGroupItem>

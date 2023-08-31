@@ -5,8 +5,24 @@
     }
     
     .card-img-top{
-        width: 350px;
+        width: 140px;
         justify-items: center;
-        margin-left: 50px;
+        margin-left: 30px;
     }
+
+.list-group-item {
+   padding: 0; 
+   width: 130px;
+   
     
+  }
+
+
+  .btn-danger {
+    margin-left: 30px;
+  }
+
+  .btn-primary{
+    margin-left: 35px;
+  }
+

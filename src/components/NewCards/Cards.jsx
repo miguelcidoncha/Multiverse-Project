@@ -63,7 +63,7 @@ const Cards = ({products, setUpdateList, updateList, handleCloseModal, handleOpe
                         <ListGroupItem><strong>Precio:</strong>{products.price}</ListGroupItem>
                     </ListGroup>
                     <button className="btn btn-danger me-2" onClick={handleDelete}>Eliminar</button>
-                    <button className="btn btn-primary me-2" onClick={handleEdit}>Editar</button>
+                    <button className="btn btn-success me-2" onClick={handleEdit}>Agregar</button>
                     
                 </Card.Body>
             </Card>

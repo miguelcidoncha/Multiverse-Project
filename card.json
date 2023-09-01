@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "type": "Funko",
+      "name": "dhgj",
+      "price": "34",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
+      "id": 2
+    }
+  ]
+}

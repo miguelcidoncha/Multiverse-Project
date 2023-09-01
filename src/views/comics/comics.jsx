@@ -1,23 +1,17 @@
-// import React from 'react';
-import Cards from "../../components/Cards/Cards";
+import React from 'react';
 
 
-const products1 = [
-  {
-    title: 'Producto 1 Vista 1',
-    imageSrc: 'imagen1.jpg',
-    description: 'Descripción del producto 1...',
-  },
-  // ... otros productos para la vista 1
-];
+const Comics = () => {
+    return (
+     <h1>Hola</h1>
+    );
+  };
+  
+  export default Comics;
 
-function View1() {
-  return (
-    <div>
-      <h2>Vista 1</h2>
-      <Cards products={products1} />
-    </div>
-  );
-}
 
-export default View1;
+
+
+
+
+

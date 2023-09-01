@@ -1,46 +1,18 @@
 {
   "products": [
     {
-      "id": 2,
       "type": "Figura",
       "name": "Hulk",
       "price": "26",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg"
-    },
-    {
-      "type": "Camiseta",
-      "name": "ssss",
-      "price": "-5",
       "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
-      "id": 3
+      "id": 2
     },
     {
       "type": "Figura",
-      "name": "lauris",
-      "price": "7",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
-      "id": 4
-    },
-    {
-      "type": "Funko",
-      "name": "REBECA",
+      "name": "Lauraiuhiuo",
       "price": "5",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
-      "id": 5
-    },
-    {
-      "type": "Funko",
-      "name": "Rebeca Poma",
-      "price": "11",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
-      "id": 6
-    },
-    {
-      "type": "Figura",
-      "name": "lauris amore",
-      "price": "11",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
-      "id": 7
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
+      "id": 3
     }
   ]
 }

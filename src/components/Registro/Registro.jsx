@@ -1,158 +1,9 @@
 // import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 // import Cards from '../NewCards/Cards';
-// import { Container, Form, Modal, Row } from 'react-bootstrap';
+// import { Container, Form, Modal, Row, Button } from 'react-bootstrap';
 // import Swal from 'sweetalert2';
-
-
-// const Registro = () => {
-
-//     const URL = " http://localhost:3000/products"
-    
-//     const getData = async () => {
-//       const response = axios.get(URL);
-//       return response;
-//     }
-
-//     const [list, setList] = useState([])
-//     const [updateList, setUpdateList] = useState(false);
-//     const [showModal, setShowModal] = useState(false);
-//     const [dataModal, setDataModal] = useState({})
-    
-//     const handleCloseModal = () => {setShowModal(false)}
-//     const handleOpenModal = () => {setShowModal(true)}
-
-//     const handleChangeModal = ({target}) => {
-//         setDataModal({
-//             ...dataModal,
-//             [target.name]: target.value
-//         })
-//     }
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         const response = await axios.put(`${URL}/${dataModal.id}`, dataModal)
-//         if (response.status === 200) {
-//             Swal.fire(
-//                 'Guardado!',
-//                 `El registro ${response.data.type} ha sido actualizado exitosamente!`,
-//                 'success'
-//             )
-//             handleCloseModal();
-//             setUpdateList(!updateList)
-//         }else {
-//             Swal.fire(
-//                 'Error!',
-//                 'Hubo un problema al actualizar el registro!',
-//                 'error'
-//             )
-//         }
-//     }
-
-
-//     useEffect(() => {
-//       getData().then((response) => {
-//         setList(response.data);
-//       })
-//     }, [updateList]) 
-      
-    
-
-//     return (
-//       <Container className='mb-5 mt-5'>
-//         <Row>
-//            {
-//         list.map((products,index) => (
-//           <Cards 
-//           key={index}
-//           products={products}
-//           setUpdateList={setUpdateList}
-//           updateList={updateList}
-//           handleCloseModal= {handleCloseModal}
-//           handleOpenModal = {handleOpenModal}
-//           setDataModal= {setDataModal}
-//           />
-//         ))
-//            }
-           
-//         </Row>
-        
-//         <Modal show={showModal} onHide={handleCloseModal}>
-//     <Modal.Header>
-//         <Modal.Title>Actualizar Datos</Modal.Title>
-//     </Modal.Header>
-
-//     <Form onSubmit={handleSubmit}>
-//         <Modal.Body>
-//             <Form.Group className="mb-3">
-//                 <select 
-//                     className="form-control"
-//                     name="type"
-//                     onChange={handleChangeModal}
-//                     required
-//                 >
-//                     <option value="">Selecciona una opción</option>
-//                     <option value="Funko">Funko Pop</option>
-//                     <option value="Camiseta">Camiseta</option>
-//                     <option value="Camiseta">Figura</option>
-//                     <option value="Camiseta">Poster</option>
-//                     <option value="Camiseta">Comic</option>
-//                 </select>
-//             </Form.Group>
-
-//             <Form.Group className="mb-3">
-//                 <Form.Label>Referencia</Form.Label>
-//                 <Form.Control
-//                     type="text"
-//                     name="name"
-//                     placeholder="Nombre"
-//                     value={dataModal.name} 
-//                     onChange={handleChangeModal}
-//                     required
-//                 />
-//             </Form.Group>
-
-//             <Form.Group className="mb-3">
-//                 <Form.Control
-//                     type="number"
-//                     name="price"
-//                     placeholder="Precio"
-//                     value={dataModal.price} 
-//                     onChange={handleChangeModal}
-//                     required
-//                 />
-//             </Form.Group>
-
-//             <Form.Group className="mb-3">
-//                 <Form.Control
-//                     type="text"
-//                     name="image"
-//                     placeholder="URL de la imagen"
-//                     value={dataModal.image} 
-//                     onChange={handleChangeModal}
-//                     required
-//                 />
-//             </Form.Group>
-//         </Modal.Body>
-
-//         <Modal.Footer>
-//             <button className="btn btn-secondary" type="reset" onClick={handleCloseModal}>Cancelar</button>
-//             <button className="btn btn-success mb-3">Guardar</button>
-//         </Modal.Footer>
-//     </Form>
-// </Modal>
-//       </Container>
-//     );
-//   };
-  
-//   export default Registro;
-
-
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import Cards from '../NewCards/Cards';
-// import { Container, Form, Modal, Row } from 'react-bootstrap';
-// import Swal from 'sweetalert2';
+// import '../Registro/Registro.css'
 
 // const Registro = () => {
 //     const URL = "http://localhost:3000/products";
@@ -173,15 +24,15 @@
 //         image: ''
 //     });
 
-//     const handleCloseModal = () => setShowModal(false);
-//     const handleOpenModal = () => setShowModal(true);
+//     // Nueva variable de estado para almacenar el ID del producto en edición
+//     const [editProductId, setEditProductId] = useState(null);
 
-//     const handleChangeModal = ({ target }) => {
-//         setDataModal({
-//             ...dataModal,
-//             [target.name]: target.value
-//         });
-//     }
+//     const handleCloseModal = () => setShowModal(false);
+//     const handleOpenModal = () => {
+//         setDataModal({}); // Inicializa el estado dataModal como un objeto vacío
+//         setShowModal(true);
+//     };
+    
 
 //     const handleNewProductChange = (e) => {
 //         setNewProductData({
@@ -192,26 +43,48 @@
 
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
-
+    
 //         try {
-//             const response = await axios.post(URL, newProductData);
-//             if (response.status === 201) {
-//                 Swal.fire(
-//                     'Guardado!',
-//                     `El nuevo producto ha sido agregado exitosamente!`,
-//                     'success'
-//                 );
-//                 handleCloseModal();
-//                 setUpdateList(!updateList);
+//             if (editProductId) {
+//                 // Realiza una solicitud PUT para actualizar el producto existente
+//                 const response = await axios.put(`${URL}/${editProductId}`, dataModal);
+//                 if (response.status === 200) {
+//                     Swal.fire(
+//                         'Actualizado!',
+//                         `El producto ha sido actualizado exitosamente!`,
+//                         'success'
+//                     );
+//                     handleCloseModal();
+//                     setUpdateList(!updateList);
+//                     setEditProductId(null); // Limpia el ID del producto en edición
+//                 } else {
+//                     Swal.fire(
+//                         'Error!',
+//                         'Hubo un problema al actualizar el producto!',
+//                         'error'
+//                     );
+//                 }
 //             } else {
-//                 Swal.fire(
-//                     'Error!',
-//                     'Hubo un problema al agregar el nuevo producto!',
-//                     'error'
-//                 );
+//                 // Realiza una solicitud POST para agregar un nuevo producto
+//                 const response = await axios.post(URL, newProductData);
+//                 if (response.status === 201) {
+//                     Swal.fire(
+//                         'Guardado!',
+//                         `El nuevo producto ha sido agregado exitosamente!`,
+//                         'success'
+//                     );
+//                     handleCloseModal();
+//                     setUpdateList(!updateList);
+//                 } else {
+//                     Swal.fire(
+//                         'Error!',
+//                         'Hubo un problema al agregar el nuevo producto!',
+//                         'error'
+//                     );
+//                 }
 //             }
 //         } catch (error) {
-//             console.error('Error al agregar el nuevo producto:', error);
+//             console.error('Error al agregar o actualizar el producto:', error);
 //         }
 //     }
 
@@ -233,10 +106,17 @@
 //                         handleCloseModal={handleCloseModal}
 //                         handleOpenModal={handleOpenModal}
 //                         setDataModal={setDataModal}
+//                         handleEdit={() => handleEdit(products)}
+//                         setEditProductId={setEditProductId}
+//                         setShowModal={setShowModal}
 //                     />
 //                 ))}
 //             </Row>
 
+//             {/* Botón para abrir el modal de agregar nuevo producto */}
+//             <Button onClick={handleOpenModal}>Agregar Nuevo Producto</Button>
+
+//             {/* Modal para agregar nuevo producto */}
 //             <Modal show={showModal} onHide={handleCloseModal}>
 //                 <Modal.Header>
 //                     <Modal.Title>Agregar Nuevo Producto</Modal.Title>
@@ -305,15 +185,16 @@
 
 // export default Registro;
 
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Cards from '../NewCards/Cards';
-import { Container, Form, Modal, Row, Button } from 'react-bootstrap';
+import { Container, Form, Modal, Row, Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import Swal from 'sweetalert2';
+import './Registro.css';
 
 const Registro = () => {
     const URL = "http://localhost:3000/products";
-    
+
     const getData = async () => {
         const response = await axios.get(URL);
         return response;
@@ -322,55 +203,125 @@ const Registro = () => {
     const [list, setList] = useState([]);
     const [updateList, setUpdateList] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const [dataModal, setDataModal] = useState({});
-    const [newProductData, setNewProductData] = useState({
+    const [dataModal, setDataModal] = useState({
         type: '',
         name: '',
         price: '',
         image: ''
     });
 
-    const handleCloseModal = () => setShowModal(false);
-    const handleOpenModal = () => setShowModal(true);
+    const [editProductId, setEditProductId] = useState(null);
 
-    const handleChangeModal = ({ target }) => {
-        setDataModal({
-            ...dataModal,
-            [target.name]: target.value
-        });
-    }
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setEditProductId(null); // Asegurarse de limpiar editProductId al cerrar el modal
+    };
+
+    const handleOpenModal = () => {
+        if (editProductId !== null) {
+            // Si está en modo de edición, cargar los datos actuales en dataModal
+            const productToEdit = list.find(product => product.id === editProductId);
+            if (productToEdit) {
+                setDataModal({
+                    type: productToEdit.type,
+                    name: productToEdit.name,
+                    price: productToEdit.price,
+                    image: productToEdit.image
+                });
+            }
+        } else {
+            // Si está en modo de creación, inicializar dataModal con valores vacíos
+            setDataModal({
+                type: '',
+                name: '',
+                price: '',
+                image: ''
+            });
+        }
+        setShowModal(true);
+    };
 
     const handleNewProductChange = (e) => {
-        setNewProductData({
-            ...newProductData,
+        setDataModal({
+            ...dataModal,
             [e.target.name]: e.target.value
         });
+    };
+
+    const handleEdit = (product) => {
+        setEditProductId(product.id);
+        handleOpenModal(); // Abre el modal para editar
+    };
+
+    const handleDelete = async (productId) => {
+
+        try {
+            const response = await axios.delete(`${URL}/${productId}`);
+            
+            if (response.status === 200) {
+                Swal.fire(
+                    'Eliminado!',
+                    `Se eliminó con éxito el registro con ID ${productId}!`,
+                    'success'
+                );
+                setUpdateList(!updateList);
+            } else {
+                Swal.fire(
+                    'Error!',
+                    'Hubo un problema al eliminar el registro!',
+                    'error'
+                );
+            }
+        } catch (error) {
+            console.error('Error al eliminar el producto:', error);
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(URL, newProductData);
-            if (response.status === 201) {
-                Swal.fire(
-                    'Guardado!',
-                    `El nuevo producto ha sido agregado exitosamente!`,
-                    'success'
-                );
-                handleCloseModal();
-                setUpdateList(!updateList);
+            if (editProductId !== null) {
+                // Si está en modo de edición, realiza una solicitud PUT para actualizar el producto
+                const response = await axios.put(`${URL}/${editProductId}`, dataModal);
+                if (response.status === 200) {
+                    Swal.fire(
+                        'Actualizado!',
+                        `El producto ha sido actualizado exitosamente!`,
+                        'success'
+                    );
+                    handleCloseModal();
+                    setUpdateList(!updateList);
+                } else {
+                    Swal.fire(
+                        'Error!',
+                        'Hubo un problema al actualizar el producto!',
+                        'error'
+                    );
+                }
             } else {
-                Swal.fire(
-                    'Error!',
-                    'Hubo un problema al agregar el nuevo producto!',
-                    'error'
-                );
+                // Si está en modo de creación, realiza una solicitud POST para agregar un nuevo producto
+                const response = await axios.post(URL, dataModal);
+                if (response.status === 201) {
+                    Swal.fire(
+                        'Guardado!',
+                        `El nuevo producto ha sido agregado exitosamente!`,
+                        'success'
+                    );
+                    handleCloseModal();
+                    setUpdateList(!updateList);
+                } else {
+                    Swal.fire(
+                        'Error!',
+                        'Hubo un problema al agregar el nuevo producto!',
+                        'error'
+                    );
+                }
             }
         } catch (error) {
-            console.error('Error al agregar el nuevo producto:', error);
+            console.error('Error al agregar o actualizar el producto:', error);
         }
-    }
+    };
 
     useEffect(() => {
         getData().then((response) => {
@@ -381,26 +332,29 @@ const Registro = () => {
     return (
         <Container className='mb-5 mt-5'>
             <Row>
-                {list.map((products, index) => (
-                    <Cards
-                        key={index}
-                        products={products}
-                        setUpdateList={setUpdateList}
-                        updateList={updateList}
-                        handleCloseModal={handleCloseModal}
-                        handleOpenModal={handleOpenModal}
-                        setDataModal={setDataModal}
-                    />
+                {list.map((product, index) => (
+                    <div key={index} className="col-4 mb-3">
+                        <Card>
+                            <img src={product.image} alt={product.type} className="card-img-top image-card" />
+                            <Card.Body className="car-body">
+                                <Card.Title className="text-center">{product.type}</Card.Title>
+                                <ListGroup className="mb-2 mx-5">
+                                    <ListGroupItem><strong>Nombre:</strong>{product.name}</ListGroupItem>
+                                    <ListGroupItem><strong>Precio:</strong>{product.price}</ListGroupItem>
+                                </ListGroup>
+                                <button className="btn btn-danger me-2" onClick={() => handleDelete(product.id)}>Eliminar</button>
+                                <button className="btn btn-success me-2" onClick={() => handleEdit(product)}>Editar</button>
+                            </Card.Body>
+                        </Card>
+                    </div>
                 ))}
             </Row>
 
-            {/* Botón para abrir el modal de agregar nuevo producto */}
             <Button onClick={handleOpenModal}>Agregar Nuevo Producto</Button>
 
-            {/* Modal para agregar nuevo producto */}
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header>
-                    <Modal.Title>Agregar Nuevo Producto</Modal.Title>
+                    <Modal.Title>{editProductId ? 'Editar Producto' : 'Agregar Nuevo Producto'}</Modal.Title>
                 </Modal.Header>
                 <Form onSubmit={handleSubmit}>
                     <Modal.Body>
@@ -410,6 +364,7 @@ const Registro = () => {
                                 name="type"
                                 onChange={handleNewProductChange}
                                 required
+                                value={dataModal.type}
                             >
                                 <option value="">Selecciona una opción</option>
                                 <option value="Funko">Funko Pop</option>
@@ -426,7 +381,7 @@ const Registro = () => {
                                 type="text"
                                 name="name"
                                 placeholder="Nombre"
-                                value={newProductData.name}
+                                value={dataModal.name}
                                 onChange={handleNewProductChange}
                                 required
                             />
@@ -437,7 +392,7 @@ const Registro = () => {
                                 type="number"
                                 name="price"
                                 placeholder="Precio"
-                                value={newProductData.price}
+                                value={dataModal.price}
                                 onChange={handleNewProductChange}
                                 required
                             />
@@ -448,7 +403,7 @@ const Registro = () => {
                                 type="text"
                                 name="image"
                                 placeholder="URL de la imagen"
-                                value={newProductData.image}
+                                value={dataModal.image}
                                 onChange={handleNewProductChange}
                                 required
                             />
@@ -456,7 +411,7 @@ const Registro = () => {
                     </Modal.Body>
                     <Modal.Footer>
                         <button className="btn btn-secondary" type="button" onClick={handleCloseModal}>Cancelar</button>
-                        <button className="btn btn-success mb-3" type="submit">Guardar</button>
+                        <button className="btn btn-success mb-3" type="submit">{editProductId ? 'Actualizar' : 'Guardar'}</button>
                     </Modal.Footer>
                 </Form>
             </Modal>
@@ -465,6 +420,9 @@ const Registro = () => {
 };
 
 export default Registro;
+
+
+
 
 
 

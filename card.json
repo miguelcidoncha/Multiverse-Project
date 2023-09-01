@@ -1,39 +1,18 @@
 {
   "products": [
     {
-      "id": 2,
-      "type": "Figura",
-      "name": "Hulk",
-      "price": "26",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg"
-    },
-    {
-      "type": "Camiseta",
-      "name": "ssss",
-      "price": "-5",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
-      "id": 3
-    },
-    {
-      "type": "Figura",
-      "name": "lauris",
-      "price": "7",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
-      "id": 4
-    },
-    {
-      "type": "Funko",
-      "name": "REBECA",
-      "price": "5",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
-      "id": 5
-    },
-    {
       "type": "Funko",
       "name": "Spiderman",
-      "price": "20",
+      "price": "33",
       "image": "https://res.cloudinary.com/duwenv0yr/image/upload/v1693303883/FunkoSpiderman_mhetsb.png",
-      "id": 7
+      "id": 2
+    },
+    {
+      "type": "Funko",
+      "name": "Spiderman 2",
+      "price": "44",
+      "image": "https://res.cloudinary.com/duwenv0yr/image/upload/v1693303883/FunkoSpiderman_mhetsb.png",
+      "id": 3
     }
   ]
 }

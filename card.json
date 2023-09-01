@@ -30,16 +30,9 @@
     },
     {
       "type": "Funko",
-      "name": "Rebeca Poma",
-      "price": "11",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
-      "id": 6
-    },
-    {
-      "type": "Figura",
-      "name": "lauris amore",
-      "price": "11",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
+      "name": "Spiderman",
+      "price": "20",
+      "image": "https://res.cloudinary.com/duwenv0yr/image/upload/v1693303883/FunkoSpiderman_mhetsb.png",
       "id": 7
     }
   ]

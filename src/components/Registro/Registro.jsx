@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import CardsHandler from '../../Handler/Cardshandler';
+import './registro.css';
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import Cards from '../NewCards/Cards';
-import { Container, Form, Modal, Row } from 'react-bootstrap';
-import Swal from 'sweetalert2';
 
 
 const Registro = () => {

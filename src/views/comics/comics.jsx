@@ -3,7 +3,11 @@ import React from 'react';
 
 const Comics = () => {
     return (
-     <h1>Hola</h1>
+      <div>
+       
+        <h1>Comics:</h1>
+        
+      </div>
     );
   };
   

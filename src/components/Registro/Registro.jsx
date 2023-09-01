@@ -65,73 +65,100 @@ const Registro = () => {
         handleOpenModal(); // Abre el modal para editar
     };
 
-    const handleDelete = async (productId) => {
+    const handleDelete = async (productId, productName) => {
+        const confirmation = await Swal.fire({
+            title: `¿Estás seguro de eliminar ${productName}?`,
+            text: "Esta acción no se puede deshacer.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#aa8caf',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Sí, Eliminarlo'
+        });
 
-        try {
-            const response = await axios.delete(`${URL}/${productId}`);
-            
-            if (response.status === 200) {
-                Swal.fire(
-                    'Eliminado!',
-                    `Se eliminó con éxito el registro con ID ${productId}!`,
-                    'success'
-                );
-                setUpdateList(!updateList);
-            } else {
-                Swal.fire(
-                    'Error!',
-                    'Hubo un problema al eliminar el registro!',
-                    'error'
-                );
+        if (confirmation.isConfirmed) {
+            try {
+                const response = await axios.delete(`${URL}/${productId}`);
+                
+                if (response.status === 200) {
+                    Swal.fire(
+                        'Eliminado!',
+                        `Se eliminó con éxito el registro con ID ${productId}!`,
+                        'success'
+                    );
+                    setUpdateList(!updateList);
+                } else {
+                    Swal.fire(
+                        'Error!',
+                        'Hubo un problema al eliminar el registro!',
+                        'error'
+                    );
+                }
+            } catch (error) {
+                console.error('Error al eliminar el producto:', error);
             }
-        } catch (error) {
-            console.error('Error al eliminar el producto:', error);
         }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {
-            if (editProductId !== null) {
-                // Si está en modo de edición, realiza una solicitud PUT para actualizar el producto
-                const response = await axios.put(`${URL}/${editProductId}`, dataModal);
-                if (response.status === 200) {
-                    Swal.fire(
-                        'Actualizado!',
-                        `El producto ha sido actualizado exitosamente!`,
-                        'success'
-                    );
-                    handleCloseModal();
-                    setUpdateList(!updateList);
+        const actionMessage = editProductId ? 'actualizar' : 'guardar';
+
+        const confirmation = await Swal.fire({
+            title: `¿Estás seguro de ${actionMessage} este producto?`,
+            text: "Esta acción no se puede deshacer.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#007BFF',
+            cancelButtonColor: '#aa8caf',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: `Sí, ${actionMessage.charAt(0).toUpperCase() + actionMessage.slice(1)}lo`
+        });
+
+        if (confirmation.isConfirmed) {
+            try {
+                if (editProductId !== null) {
+                    // Si está en modo de edición, realiza una solicitud PUT para actualizar el producto
+                    const response = await axios.put(`${URL}/${editProductId}`, dataModal);
+                    if (response.status === 200) {
+                        Swal.fire(
+                            'Actualizado!',
+                            `El producto ha sido actualizado exitosamente!`,
+                            'success'
+                        );
+                        handleCloseModal();
+                        setUpdateList(!updateList);
+                    } else {
+                        Swal.fire(
+                            'Error!',
+                            'Hubo un problema al actualizar el producto!',
+                            'error'
+                        );
+                    }
                 } else {
-                    Swal.fire(
-                        'Error!',
-                        'Hubo un problema al actualizar el producto!',
-                        'error'
-                    );
+                    // Si está en modo de creación, realiza una solicitud POST para agregar un nuevo producto
+                    const response = await axios.post(URL, dataModal);
+                    if (response.status === 201) {
+                        Swal.fire(
+                            'Guardado!',
+                            `El nuevo producto ha sido agregado exitosamente!`,
+                            'success'
+                        );
+                        handleCloseModal();
+                        setUpdateList(!updateList);
+                    } else {
+                        Swal.fire(
+                            'Error!',
+                            'Hubo un problema al agregar el nuevo producto!',
+                            'error'
+                        );
+                    }
                 }
-            } else {
-                // Si está en modo de creación, realiza una solicitud POST para agregar un nuevo producto
-                const response = await axios.post(URL, dataModal);
-                if (response.status === 201) {
-                    Swal.fire(
-                        'Guardado!',
-                        `El nuevo producto ha sido agregado exitosamente!`,
-                        'success'
-                    );
-                    handleCloseModal();
-                    setUpdateList(!updateList);
-                } else {
-                    Swal.fire(
-                        'Error!',
-                        'Hubo un problema al agregar el nuevo producto!',
-                        'error'
-                    );
-                }
+            } catch (error) {
+                console.error(`Error al ${actionMessage} el producto:`, error);
             }
-        } catch (error) {
-            console.error('Error al agregar o actualizar el producto:', error);
         }
     };
 
@@ -147,14 +174,14 @@ const Registro = () => {
                 {list.map((product, index) => (
                     <div key={index} className="col-4 mb-3">
                         <Card>
-                            <img src={product.image} alt={product.type} className="card-img-top image-card" />
+                            <img src={product.image} alt={product.type} className="card-img top image-card" />
                             <Card.Body className="car-body">
                                 <Card.Title className="text-center">{product.type}</Card.Title>
                                 <ListGroup className="mb-2 mx-5">
                                     <ListGroupItem><strong>Nombre:</strong>{product.name}</ListGroupItem>
                                     <ListGroupItem><strong>Precio:</strong>{product.price}</ListGroupItem>
                                 </ListGroup>
-                                <button className="btn btn-danger me-2" onClick={() => handleDelete(product.id)}>Eliminar</button>
+                                <button className="btn btn-danger me-2" onClick={() => handleDelete(product.id, product.name)}>Eliminar</button>
                                 <button className="btn btn-success me-2" onClick={() => handleEdit(product)}>Editar</button>
                             </Card.Body>
                         </Card>
@@ -232,15 +259,4 @@ const Registro = () => {
 };
 
 export default Registro;
-
-
-
-
-
-
-
-
-
-
-
 

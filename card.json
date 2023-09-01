@@ -1,18 +1,11 @@
 {
   "products": [
     {
-      "type": "Figura",
-      "name": "Hulk",
-      "price": "26",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
+      "type": "Funko",
+      "name": "dhgj",
+      "price": "34",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
       "id": 2
-    },
-    {
-      "type": "Figura",
-      "name": "Lauraiuhiuo",
-      "price": "5",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
-      "id": 3
     }
   ]
 }

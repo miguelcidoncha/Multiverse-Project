@@ -6,6 +6,13 @@
       "price": "3636",
       "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
       "id": 3
+    },
+    {
+      "type": "Camiseta",
+      "name": "Rebeca Poma",
+      "price": "2",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
+      "id": 4
     }
   ]
 }

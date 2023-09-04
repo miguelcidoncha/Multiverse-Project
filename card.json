@@ -2,16 +2,9 @@
   "products": [
     {
       "type": "Funko",
-      "name": "Spiderman",
-      "price": "33",
-      "image": "https://res.cloudinary.com/duwenv0yr/image/upload/v1693303883/FunkoSpiderman_mhetsb.png",
-      "id": 2
-    },
-    {
-      "type": "Funko",
-      "name": "Spiderman 2",
-      "price": "44",
-      "image": "https://res.cloudinary.com/duwenv0yr/image/upload/v1693303883/FunkoSpiderman_mhetsb.png",
+      "name": "Batman",
+      "price": "3636",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
       "id": 3
     }
   ]

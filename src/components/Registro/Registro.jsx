@@ -1,191 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import Cards from '../NewCards/Cards';
-// import { Container, Form, Modal, Row, Button } from 'react-bootstrap';
-// import Swal from 'sweetalert2';
-// import '../Registro/Registro.css'
-
-// const Registro = () => {
-//     const URL = "http://localhost:3000/products";
-    
-//     const getData = async () => {
-//         const response = await axios.get(URL);
-//         return response;
-//     }
-
-//     const [list, setList] = useState([]);
-//     const [updateList, setUpdateList] = useState(false);
-//     const [showModal, setShowModal] = useState(false);
-//     const [dataModal, setDataModal] = useState({});
-//     const [newProductData, setNewProductData] = useState({
-//         type: '',
-//         name: '',
-//         price: '',
-//         image: ''
-//     });
-
-//     // Nueva variable de estado para almacenar el ID del producto en edición
-//     const [editProductId, setEditProductId] = useState(null);
-
-//     const handleCloseModal = () => setShowModal(false);
-//     const handleOpenModal = () => {
-//         setDataModal({}); // Inicializa el estado dataModal como un objeto vacío
-//         setShowModal(true);
-//     };
-    
-
-//     const handleNewProductChange = (e) => {
-//         setNewProductData({
-//             ...newProductData,
-//             [e.target.name]: e.target.value
-//         });
-//     };
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-    
-//         try {
-//             if (editProductId) {
-//                 // Realiza una solicitud PUT para actualizar el producto existente
-//                 const response = await axios.put(`${URL}/${editProductId}`, dataModal);
-//                 if (response.status === 200) {
-//                     Swal.fire(
-//                         'Actualizado!',
-//                         `El producto ha sido actualizado exitosamente!`,
-//                         'success'
-//                     );
-//                     handleCloseModal();
-//                     setUpdateList(!updateList);
-//                     setEditProductId(null); // Limpia el ID del producto en edición
-//                 } else {
-//                     Swal.fire(
-//                         'Error!',
-//                         'Hubo un problema al actualizar el producto!',
-//                         'error'
-//                     );
-//                 }
-//             } else {
-//                 // Realiza una solicitud POST para agregar un nuevo producto
-//                 const response = await axios.post(URL, newProductData);
-//                 if (response.status === 201) {
-//                     Swal.fire(
-//                         'Guardado!',
-//                         `El nuevo producto ha sido agregado exitosamente!`,
-//                         'success'
-//                     );
-//                     handleCloseModal();
-//                     setUpdateList(!updateList);
-//                 } else {
-//                     Swal.fire(
-//                         'Error!',
-//                         'Hubo un problema al agregar el nuevo producto!',
-//                         'error'
-//                     );
-//                 }
-//             }
-//         } catch (error) {
-//             console.error('Error al agregar o actualizar el producto:', error);
-//         }
-//     }
-
-//     useEffect(() => {
-//         getData().then((response) => {
-//             setList(response.data);
-//         });
-//     }, [updateList]);
-
-//     return (
-//         <Container className='mb-5 mt-5'>
-//             <Row>
-//                 {list.map((products, index) => (
-//                     <Cards
-//                         key={index}
-//                         products={products}
-//                         setUpdateList={setUpdateList}
-//                         updateList={updateList}
-//                         handleCloseModal={handleCloseModal}
-//                         handleOpenModal={handleOpenModal}
-//                         setDataModal={setDataModal}
-//                         handleEdit={() => handleEdit(products)}
-//                         setEditProductId={setEditProductId}
-//                         setShowModal={setShowModal}
-//                     />
-//                 ))}
-//             </Row>
-
-//             {/* Botón para abrir el modal de agregar nuevo producto */}
-//             <Button onClick={handleOpenModal}>Agregar Nuevo Producto</Button>
-
-//             {/* Modal para agregar nuevo producto */}
-//             <Modal show={showModal} onHide={handleCloseModal}>
-//                 <Modal.Header>
-//                     <Modal.Title>Agregar Nuevo Producto</Modal.Title>
-//                 </Modal.Header>
-//                 <Form onSubmit={handleSubmit}>
-//                     <Modal.Body>
-//                         <Form.Group className="mb-3">
-//                             <select
-//                                 className="form-control"
-//                                 name="type"
-//                                 onChange={handleNewProductChange}
-//                                 required
-//                             >
-//                                 <option value="">Selecciona una opción</option>
-//                                 <option value="Funko">Funko Pop</option>
-//                                 <option value="Camiseta">Camiseta</option>
-//                                 <option value="Figura">Figura</option>
-//                                 <option value="Poster">Poster</option>
-//                                 <option value="Comic">Comic</option>
-//                             </select>
-//                         </Form.Group>
-
-//                         <Form.Group className="mb-3">
-//                             <Form.Label>Referencia</Form.Label>
-//                             <Form.Control
-//                                 type="text"
-//                                 name="name"
-//                                 placeholder="Nombre"
-//                                 value={newProductData.name}
-//                                 onChange={handleNewProductChange}
-//                                 required
-//                             />
-//                         </Form.Group>
-
-//                         <Form.Group className="mb-3">
-//                             <Form.Control
-//                                 type="number"
-//                                 name="price"
-//                                 placeholder="Precio"
-//                                 value={newProductData.price}
-//                                 onChange={handleNewProductChange}
-//                                 required
-//                             />
-//                         </Form.Group>
-
-//                         <Form.Group className="mb-3">
-//                             <Form.Control
-//                                 type="text"
-//                                 name="image"
-//                                 placeholder="URL de la imagen"
-//                                 value={newProductData.image}
-//                                 onChange={handleNewProductChange}
-//                                 required
-//                             />
-//                         </Form.Group>
-//                     </Modal.Body>
-//                     <Modal.Footer>
-//                         <button className="btn btn-secondary" type="button" onClick={handleCloseModal}>Cancelar</button>
-//                         <button className="btn btn-success mb-3" type="submit">Guardar</button>
-//                     </Modal.Footer>
-//                 </Form>
-//             </Modal>
-//         </Container>
-//     );
-// };
-
-// export default Registro;
-
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Container, Form, Modal, Row, Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
@@ -214,12 +26,11 @@ const Registro = () => {
 
     const handleCloseModal = () => {
         setShowModal(false);
-        setEditProductId(null); // Asegurarse de limpiar editProductId al cerrar el modal
+        setEditProductId(null);
     };
 
     const handleOpenModal = () => {
         if (editProductId !== null) {
-            // Si está en modo de edición, cargar los datos actuales en dataModal
             const productToEdit = list.find(product => product.id === editProductId);
             if (productToEdit) {
                 setDataModal({
@@ -230,7 +41,6 @@ const Registro = () => {
                 });
             }
         } else {
-            // Si está en modo de creación, inicializar dataModal con valores vacíos
             setDataModal({
                 type: '',
                 name: '',
@@ -250,76 +60,101 @@ const Registro = () => {
 
     const handleEdit = (product) => {
         setEditProductId(product.id);
-        handleOpenModal(); // Abre el modal para editar
+        handleOpenModal();
     };
 
-    const handleDelete = async (productId) => {
+    const handleDelete = async (productId, productName) => {
+        const confirmation = await Swal.fire({
+            title: `¿Estás seguro de eliminar ${productName}?`,
+            text: "Esta acción no se puede deshacer.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#aa8caf',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Sí, Eliminarlo'
+        });
 
-        try {
-            const response = await axios.delete(`${URL}/${productId}`);
-            
-            if (response.status === 200) {
-                Swal.fire(
-                    'Eliminado!',
-                    `Se eliminó con éxito el registro con ID ${productId}!`,
-                    'success'
-                );
-                setUpdateList(!updateList);
-            } else {
-                Swal.fire(
-                    'Error!',
-                    'Hubo un problema al eliminar el registro!',
-                    'error'
-                );
+        if (confirmation.isConfirmed) {
+            try {
+                const response = await axios.delete(`${URL}/${productId}`);
+                
+                if (response.status === 200) {
+                    Swal.fire(
+                        'Eliminado!',
+                        `Se eliminó con éxito el registro con ID ${productId}!`,
+                        'success'
+                    );
+                    setUpdateList(!updateList);
+                } else {
+                    Swal.fire(
+                        'Error!',
+                        'Hubo un problema al eliminar el registro!',
+                        'error'
+                    );
+                }
+            } catch (error) {
+                console.error('Error al eliminar el producto:', error);
             }
-        } catch (error) {
-            console.error('Error al eliminar el producto:', error);
         }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {
-            if (editProductId !== null) {
-                // Si está en modo de edición, realiza una solicitud PUT para actualizar el producto
-                const response = await axios.put(`${URL}/${editProductId}`, dataModal);
-                if (response.status === 200) {
-                    Swal.fire(
-                        'Actualizado!',
-                        `El producto ha sido actualizado exitosamente!`,
-                        'success'
-                    );
-                    handleCloseModal();
-                    setUpdateList(!updateList);
+        const actionMessage = editProductId ? 'actualizar' : 'guardar';
+
+        const confirmation = await Swal.fire({
+            title: `¿Estás seguro de ${actionMessage} este producto?`,
+            text: "Esta acción no se puede deshacer.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#007BFF',
+            cancelButtonColor: '#aa8caf',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: `Sí, ${actionMessage.charAt(0).toUpperCase() + actionMessage.slice(1)}lo`
+        });
+
+        if (confirmation.isConfirmed) {
+            try {
+                if (editProductId !== null) {
+                    const response = await axios.put(`${URL}/${editProductId}`, dataModal);
+                    if (response.status === 200) {
+                        Swal.fire(
+                            'Actualizado!',
+                            `El producto ha sido actualizado exitosamente!`,
+                            'success'
+                        );
+                        handleCloseModal();
+                        setUpdateList(!updateList);
+                    } else {
+                        Swal.fire(
+                            'Error!',
+                            'Hubo un problema al actualizar el producto!',
+                            'error'
+                        );
+                    }
                 } else {
-                    Swal.fire(
-                        'Error!',
-                        'Hubo un problema al actualizar el producto!',
-                        'error'
-                    );
+                    const response = await axios.post(URL, dataModal);
+                    if (response.status === 201) {
+                        Swal.fire(
+                            'Guardado!',
+                            `El nuevo producto ha sido agregado exitosamente!`,
+                            'success'
+                        );
+                        handleCloseModal();
+                        setUpdateList(!updateList);
+                    } else {
+                        Swal.fire(
+                            'Error!',
+                            'Hubo un problema al agregar el nuevo producto!',
+                            'error'
+                        );
+                    }
                 }
-            } else {
-                // Si está en modo de creación, realiza una solicitud POST para agregar un nuevo producto
-                const response = await axios.post(URL, dataModal);
-                if (response.status === 201) {
-                    Swal.fire(
-                        'Guardado!',
-                        `El nuevo producto ha sido agregado exitosamente!`,
-                        'success'
-                    );
-                    handleCloseModal();
-                    setUpdateList(!updateList);
-                } else {
-                    Swal.fire(
-                        'Error!',
-                        'Hubo un problema al agregar el nuevo producto!',
-                        'error'
-                    );
-                }
+            } catch (error) {
+                console.error(`Error al ${actionMessage} el producto:`, error);
             }
-        } catch (error) {
-            console.error('Error al agregar o actualizar el producto:', error);
         }
     };
 
@@ -329,20 +164,34 @@ const Registro = () => {
         });
     }, [updateList]);
 
+    useEffect(() => {
+        if (editProductId !== null) {
+            const productToEdit = list.find(product => product.id === editProductId);
+            if (productToEdit) {
+                setDataModal({
+                    type: productToEdit.type,
+                    name: productToEdit.name,
+                    price: productToEdit.price,
+                    image: productToEdit.image
+                });
+            }
+        }
+    }, [editProductId, list]);
+
     return (
         <Container className='mb-5 mt-5'>
             <Row>
                 {list.map((product, index) => (
                     <div key={index} className="col-4 mb-3">
                         <Card>
-                            <img src={product.image} alt={product.type} className="card-img-top image-card" />
+                            <img src={product.image} alt={product.type} className="card-img top image-card" />
                             <Card.Body className="car-body">
                                 <Card.Title className="text-center">{product.type}</Card.Title>
                                 <ListGroup className="mb-2 mx-5">
                                     <ListGroupItem><strong>Nombre:</strong>{product.name}</ListGroupItem>
                                     <ListGroupItem><strong>Precio:</strong>{product.price}</ListGroupItem>
                                 </ListGroup>
-                                <button className="btn btn-danger me-2" onClick={() => handleDelete(product.id)}>Eliminar</button>
+                                <button className="btn btn-danger me-2" onClick={() => handleDelete(product.id, product.name)}>Eliminar</button>
                                 <button className="btn btn-success me-2" onClick={() => handleEdit(product)}>Editar</button>
                             </Card.Body>
                         </Card>
@@ -420,15 +269,3 @@ const Registro = () => {
 };
 
 export default Registro;
-
-
-
-
-
-
-
-
-
-
-
-

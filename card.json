@@ -13,6 +13,34 @@
       "price": "2",
       "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
       "id": 4
+    },
+    {
+      "type": "Camiseta",
+      "name": "Laura",
+      "price": "25356",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
+      "id": 5
+    },
+    {
+      "type": "Figura",
+      "name": "Batman",
+      "price": "87",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322454/Civil_War_lpp6uc.jpg",
+      "id": 6
+    },
+    {
+      "type": "Comic",
+      "name": "dfhgdah",
+      "price": "5346",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
+      "id": 7
+    },
+    {
+      "type": "Poster",
+      "name": "ahaeth",
+      "price": "325345",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
+      "id": 8
     }
   ]
 }

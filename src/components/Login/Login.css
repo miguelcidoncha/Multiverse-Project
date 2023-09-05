@@ -1,45 +1,81 @@
-/* Register.css */
+/* Contenedor principal */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background-color:white; */
+    /* background-color: #fff; */
+}
 
-/* Fondo negro para todo el formulario */
-.register-container {
-  background-color: #000; /* Negro */
-  color: #fff; /* Texto en blanco */
-  padding: 20px;
-  border-radius: 5px;
+/* Columna izquierda (formulario) */
+.login-form {
+    flex: 1;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+    max-width: 400px;
+    /* Ancho máximo del formulario */
+    margin: 10 20px;
+    /* Margen en los lados para separar las columnas */
+}
 
+/* Estilos para el título */
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
 /* Estilos para los campos de entrada y etiquetas */
 .form-group {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-/* Etiquetas blancas */
+/* Etiquetas */
 .form-group label {
-  color: #fff;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
 }
 
 /* Campos de entrada */
 .form-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #fff;
-  background-color: transparent; /* Fondo transparente */
-  color: #fff; /* Texto en blanco */
-  border-radius: 5px;
-}
-
-/* Estilos para el botón de registro */
-.register-button {
-  background-color: #007bff; /* Color de fondo azul */
-  color: #fff; /* Texto en blanco */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 /* Estilos para mensajes de error */
 .error {
-  color: #ff0000; /* Texto en rojo para errores */
+    color: #ff0000;
+    margin-top: 5px;
+}
+
+/* Estilos para el botón de registro */
+.register-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la imagen */
+.login-image img {
+    max-width: 100%;
+    max-height: 100%;
+    /* Mismo alto que el formulario */
+    height: auto;
+    /* opacity: 0.9;   */
 }

@@ -50,10 +50,10 @@ Multiverse is an e-commerce website designed to effectively sell merchandise pro
 
 
 ## Next Steps 🔜
-For the future, we would like to be able to add images to visually complement the products added. It would also be interesting to differentiate between types of customers/users, whether they are individuals or businesses/companies. Allowing users to create a profile to access various promotions or discounts would be beneficial as well. Similarly, we aim to configure the SQL Server to send purchase confirmations to users via email. Lastly, we plan to work on the front-end to create a web page that replaces the Swagger interface and link it with the database.
+Coming soon, we will continue developing the Full Stack project with the repository https://github.com/miguelcidoncha/Multiverse-Back-end. The goal is to be able to work with both this Front-end repository and the Back-end repository, thus creating a fully functional e-commerce website where we will combine both the visual and the database aspects.
 
 ## Authors 👨‍💻👩‍💻
 
-| [<img src="https://avatars.githubusercontent.com/u/132567624?v=4" width=100><br><sub>Francisco Manuel Nieto</sub>](https://github.com/franciscomanuelnietogarcia) | [<img src="https://avatars.githubusercontent.com/u/133955831?v=4" width=100><br><sub>Isabel Lozano</sub>](https://github.com/isabellozano37) | [<img src="https://avatars.githubusercontent.com/u/132560447?v=4" width=100><br><sub>Viacheslav Fitlin</sub>](https://github.com/Slavafit) | [<img src="https://avatars.githubusercontent.com/u/132567398?v=4" width=100><br><sub>Miguel Cidoncha</sub>](https://github.com/miguelcidoncha) |
+| [<img src="https://avatars.githubusercontent.com/u/132559559?v=4" width=100><br><sub>Laura Barrero</sub>](https://github.com/laurabarrerogonzalez) | [<img src="https://avatars.githubusercontent.com/u/132651136?v=4" width=100><br><sub>Rebeca Poma</sub>](https://github.com/rebecapoma6) | [<img src="https://avatars.githubusercontent.com/u/132766257?v=4" width=100><br><sub>Javier Serrano</sub>](https://github.com/JaviSeC) | [<img src="https://avatars.githubusercontent.com/u/132567398?v=4" width=100><br><sub>Miguel Cidoncha</sub>](https://github.com/miguelcidoncha) |
 | :---: | :---: | :---: | :---: |
 

@@ -26,12 +26,11 @@ const Registro = () => {
 
     const handleCloseModal = () => {
         setShowModal(false);
-        setEditProductId(null); // Asegurarse de limpiar editProductId al cerrar el modal
+        setEditProductId(null);
     };
 
     const handleOpenModal = () => {
         if (editProductId !== null) {
-            // Si está en modo de edición, cargar los datos actuales en dataModal
             const productToEdit = list.find(product => product.id === editProductId);
             if (productToEdit) {
                 setDataModal({
@@ -42,7 +41,6 @@ const Registro = () => {
                 });
             }
         } else {
-            // Si está en modo de creación, inicializar dataModal con valores vacíos
             setDataModal({
                 type: '',
                 name: '',
@@ -62,7 +60,7 @@ const Registro = () => {
 
     const handleEdit = (product) => {
         setEditProductId(product.id);
-        handleOpenModal(); // Abre el modal para editar
+        handleOpenModal();
     };
 
     const handleDelete = async (productId, productName) => {
@@ -120,7 +118,6 @@ const Registro = () => {
         if (confirmation.isConfirmed) {
             try {
                 if (editProductId !== null) {
-                    // Si está en modo de edición, realiza una solicitud PUT para actualizar el producto
                     const response = await axios.put(`${URL}/${editProductId}`, dataModal);
                     if (response.status === 200) {
                         Swal.fire(
@@ -138,7 +135,6 @@ const Registro = () => {
                         );
                     }
                 } else {
-                    // Si está en modo de creación, realiza una solicitud POST para agregar un nuevo producto
                     const response = await axios.post(URL, dataModal);
                     if (response.status === 201) {
                         Swal.fire(
@@ -167,6 +163,20 @@ const Registro = () => {
             setList(response.data);
         });
     }, [updateList]);
+
+    useEffect(() => {
+        if (editProductId !== null) {
+            const productToEdit = list.find(product => product.id === editProductId);
+            if (productToEdit) {
+                setDataModal({
+                    type: productToEdit.type,
+                    name: productToEdit.name,
+                    price: productToEdit.price,
+                    image: productToEdit.image
+                });
+            }
+        }
+    }, [editProductId, list]);
 
     return (
         <Container className='mb-5 mt-5'>
@@ -259,4 +269,3 @@ const Registro = () => {
 };
 
 export default Registro;
-

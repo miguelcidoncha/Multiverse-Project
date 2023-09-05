@@ -22,6 +22,7 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
     "embla-carousel-react": "^8.0.0-rc12",
+    "formik": "^2.4.3",
     "framer-motion": "^10.16.1",
     "jsdom": "^22.1.0",
     "json-server": "^0.17.3",
@@ -29,11 +30,14 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.46.0",
     "react-router-dom": "^6.15.0",
     "sweetalert2": "^11.7.27",
-    "swiper": "^10.2.0"
+    "swiper": "^10.2.0",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",

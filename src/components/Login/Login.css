@@ -1,0 +1,45 @@
+/* Register.css */
+
+/* Fondo negro para todo el formulario */
+.register-container {
+  background-color: #000; /* Negro */
+  color: #fff; /* Texto en blanco */
+  padding: 20px;
+  border-radius: 5px;
+
+}
+
+/* Estilos para los campos de entrada y etiquetas */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Etiquetas blancas */
+.form-group label {
+  color: #fff;
+}
+
+/* Campos de entrada */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: transparent; /* Fondo transparente */
+  color: #fff; /* Texto en blanco */
+  border-radius: 5px;
+}
+
+/* Estilos para el botón de registro */
+.register-button {
+  background-color: #007bff; /* Color de fondo azul */
+  color: #fff; /* Texto en blanco */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para mensajes de error */
+.error {
+  color: #ff0000; /* Texto en rojo para errores */
+}

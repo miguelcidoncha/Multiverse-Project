@@ -14,7 +14,8 @@ import Figures from './views/figures/figures';
 import Funkos from './views/funkopops/funkos';
 import Posters from './views/posters/poster';
 import Shirts from './views/shirts/shirts';
-// import NewProduct from './container/NewProduct';
+import Login from './components/Login/Login';
+
 
 
 
@@ -28,7 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/registro" element={<Registro />} />
-          {/* <Route path='/new' element={<NewProduct/>} /> */}
+          <Route path='/login' element={<Login/>} /> 
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/comics" element={<Comics />} />
           <Route path="/figuras" element={<Figures />} />

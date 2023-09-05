@@ -8,7 +8,7 @@ Body{
   margin-top: 2%;
 }
 .card-customer {
-  width: 280px; /* Tamaño cuadrado */
+  width: 20px; /* Tamaño cuadrado */
   height: 520px; /* Tamaño cuadrado */
   border: 1px solid #000000;
   padding: 10px;
@@ -30,6 +30,7 @@ Body{
   align-items: center;
   margin-top: 10px;
 }
+
 .delete-button,
 .add-button {
   border: none;
@@ -69,7 +70,11 @@ Body{
  
   
 }
-
+/* 
+.button{
+  width: 5px;
+  height: 10px;
+} */
 
 .btn-danger {
   margin-left: 30px;

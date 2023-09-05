@@ -27,7 +27,7 @@ const Login = () => {
     };
 
     return (
-        <div className="login-container">
+        <div className="login-container" data-testid="login">
             <div className="login-image">
                 <img src="https://res.cloudinary.com/ddgpmxprs/image/upload/v1693860471/ConanRegister2_ejaovf.jpg" alt="Imagen de registro" />
             </div>

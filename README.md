@@ -32,8 +32,7 @@ Screen images will be available here shortly. Stay tuned! <br>
 
 ## Libraries 📚
 
-
-## Tech Stack 🛠️
+<img src="images/ReactBoostrap.png" width="100" height="auto"><img src="images/Formik.png" width="100" height="30"><img src="images/PrimeReact.png" width="100" height="auto"><img src="images/React Hook Form.png" width="100" height="25"><img src="images/React Router.png" width="100" height="25"><img src="images/Sweet Alert.png" width="100" height="30"><img src="images/Swiper.png" width="100" height="auto"><img src="images/YUP.png" width="100" height="30">
 
 ## Technologies and Tools 🔨
 <div>  
@@ -47,6 +46,10 @@ Screen images will be available here shortly. Stay tuned! <br>
 <a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a>  
 <a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>  
 </div>
+
+## Tech Stack 🛠️
+
+<img src="images/Axios.png" width="100" height="auto"><img src="images/JSON Server.png" width="100" height="auto"><img src="images/Jest.png" width="100" height="auto"><img src="images/Testing Library.png" width="100" height="auto"><img src="images/Vitest.png" width="100" height="auto">
 
 ## Methodology 📚
 

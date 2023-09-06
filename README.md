@@ -30,6 +30,11 @@ Screen images will be available here shortly. Stay tuned! <br>
 ● Slack <br>
 ● Zoom
 
+## Libraries 📚
+
+
+## Tech Stack 🛠️
+
 ## Technologies and Tools 🔨
 <div>  
 <a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  

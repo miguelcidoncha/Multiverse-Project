@@ -22,6 +22,7 @@ Multiverse is an e-commerce website designed to effectively sell merchandise pro
 ● HTML <br>
 ● GitHub <br>
 ● Trello <br>
+● Figma <br>
 ● Slack <br>
 ● Zoom
 
@@ -44,13 +45,35 @@ Multiverse is an e-commerce website designed to effectively sell merchandise pro
 ● Mob, pair and solo programming <br>
 ● Agile with Scrum & Trello <br>
 
+## Tests ✔️
+
 
 ## Installation Process ⬆️
 
 1. Clone the GitHub repository: https://github.com/miguelcidoncha/Multiverse-Proyect
 2. Open the file using Visual Studio Code.
 3. Open the terminal in Visual Studio Code.
-4. Install the following commands: **npm install / npm install react-bootstrap bootstrap / npm install axios / npm i json-server / npm install primereact / npm install swiper / npm install @fortawesome/fontawesome-free@6.4.2 / npm install @fortawesome/free-solid-svg-icons@6.4.2 / npm install @fortawesome/react-fontawesome@0.2.0 / npm install sweetalert2 / npm i yup / npm i vite / npm i vitest / npm install --save-dev jest / npm install --save-dev @testing-library/react / npm i react-router-dom / npm install react-hook-form / npm install formik --save / npm init @eslint/config / npm i @nextui-org/react**.
+4. Install the following commands:
+   ● **npm install 
+   ● npm install axios 
+   ● npm i json-server 
+   ● npm i vite 
+   ● npm i vitest 
+   ● npm install --save-dev jest 
+   ● npm install --save-dev @testing-library/react 
+   ● npm i react-router-dom 
+   ● npm install react-hook-form 
+   ● npm install react-bootstrap bootstrap 
+   ● npm install primereact 
+   ● npm install swiper 
+   ● npm install sweetalert2 
+   ● npm i yup 
+   ● npm install formik --save 
+   ● npm init @eslint/config 
+   ● npm i @nextui-org/react
+   ● npm install @fortawesome/fontawesome-free@6.4.2 
+   ● npm install @fortawesome/free-solid-svg-icons@6.4.2 
+   ● npm install @fortawesome/react-fontawesome@0.2.0**   
 5. Once the component installations are complete, in a new terminal, run npm run dev. Open the **localhost**: that appears.
 6. In a new terminal, run the command json-server --watch cards.json. Open the **localhost**: that appears.
 7. Now you can view not only the static Front-end web page but also add, modify, and delete the content of the cards through the Fake API."

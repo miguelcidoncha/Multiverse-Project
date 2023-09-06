@@ -75,9 +75,9 @@ Multiverse is an e-commerce website designed to effectively sell merchandise pro
    ● npm install @fortawesome/fontawesome-free@6.4.2 <br>
    ● npm install @fortawesome/free-solid-svg-icons@6.4.2 <br>
    ● npm install @fortawesome/react-fontawesome@0.2.0**  <br> 
-5. Once the component installations are complete, in a new terminal, run npm run dev. Open the **localhost**: that appears.
-6. In a new terminal, run the command json-server --watch cards.json. Open the **localhost**: that appears.
-7. Now you can view not only the static Front-end web page but also add, modify, and delete the content of the cards through the Fake API."
+5. Once the component installations are complete, in a new terminal, run **npm run dev**. Open the **localhost**: that appears.
+6. In a new terminal, run the command **json-server --watch cards.json**. Open the **localhost**: that appears.
+7. Now you can view not only the static Front-end web page but also add, modify, and delete the content of the cards through the Fake API.
 
 
 ## Next Steps 🔜

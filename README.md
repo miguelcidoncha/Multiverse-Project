@@ -38,6 +38,13 @@ Multiverse is an e-commerce website designed to effectively sell merchandise pro
 <a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>  
 </div>
 
+## Methodology 📚
+
+● Testing <br>
+● Mob, pair and solo programming <br>
+● Agile with Scrum & Trello <br>
+
+
 ## Installation Process ⬆️
 
 1. Clone the GitHub repository: https://github.com/miguelcidoncha/Multiverse-Proyect

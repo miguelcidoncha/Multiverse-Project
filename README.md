@@ -84,7 +84,6 @@ Screen images will be available here shortly. Stay tuned! <br>
    ● npm i yup <br>
    ● npm install formik --save <br>
    ● npm init @eslint/config <br>
-   ● npm i @nextui-org/react <br>
    ● npm install @fortawesome/fontawesome-free@6.4.2 <br>
    ● npm install @fortawesome/free-solid-svg-icons@6.4.2 <br>
    ● npm install @fortawesome/react-fontawesome@0.2.0**  <br> 

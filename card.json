@@ -25,7 +25,7 @@
       "type": "Figura",
       "name": "Batman",
       "price": "87",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322454/Civil_War_lpp6uc.jpg",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
       "id": 6
     },
     {
@@ -37,8 +37,8 @@
     },
     {
       "type": "Poster",
-      "name": "ahaeth",
-      "price": "325345",
+      "name": "Capitán América",
+      "price": "20",
       "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
       "id": 8
     }

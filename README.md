@@ -49,7 +49,7 @@ Screen images will be available here shortly. Stay tuned! <br>
 
 ## Tech Stack 🛠️
 
-<img src="images/Axios.png" width="100" height="auto"><img src="images/JSON Server.png" width="100" height="auto">
+<img src="images/Axios.png" width="100" height="auto"><img src="images/JSON Server.png" width="100" height="auto"><img src="images/Node.js.png" width="100" height="auto">
 
 ## Methodology 📚
 
@@ -64,7 +64,7 @@ Screen images will be available here shortly. Stay tuned! <br>
 
 ## Tests ☑️
 
-<img src="images/Jestt.png" width="100" height="auto"><img src="images/Testing Library.png" width="100" height="auto"><img src="images/Vitest.png" width="100" height="25">
+<img src="images/Jestt.png" width="100" height="auto"><img src="images/Testing Library.png" width="90" height="30"><img src="images/Vitest.png" width="80" height="30">
 
 ## Tests Screenshots (Coming Soon) ✔️
 

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const Funkos = ({ addToCart }) => {
   const [funkos, setFunkos] = useState([]);
@@ -19,19 +21,42 @@ const Funkos = ({ addToCart }) => {
     addToCart(product);
   };
 
+
+  const [likedProduct, setLikedProduct] = useState(
+    funkos.map(() => false)
+  );
+
+  const handleLikeClick = (idx) => {
+    const updatedLikedProduct = [...likedProduct];
+    updatedLikedProduct[idx] = !updatedLikedProduct[idx];
+    setLikedProduct(updatedLikedProduct);
+  };
+
+
   return (
     <div className="container">
       <h1>Funko Pops</h1>
       <div className="row row-cols-1 row-cols-md-4 g-2">
-        {funkos.map((funko) => (
+        {funkos.map((funko, idx) => (
           <div key={funko.id} className="col">
             <div className="card mb-3">
               <img src={funko.image} alt={funko.type} className="card-img-top image-card" />
               <div className="card-body">
-                <h5 className="card-title">{funko.type}</h5>
-                <p className="card-text"><strong>Nombre:</strong> {funko.name}</p>
-                <p className="card-text"><strong>Precio:</strong> ${funko.price}</p>
-                <button className="btn btn-primary" onClick={() => handleAddToCart(funko)}>Añadir al carrito</button>
+                <h5 className="card-title text-center">{funko.type}</h5>
+                <p className="card-text text-center"> {funko.name}</p>
+                <p className="card-text text-center"> {funko.price}€</p>
+                <div className="d-flex justify-content-between align-items-center">
+                  <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(funko)}>Añadir al carrito</button>
+                  <button
+                    className="btn btn-link"
+                    style={{
+                      color: likedProduct[idx] ? 'red' : 'white',
+                    }}
+                    onClick={() => handleLikeClick(idx)}
+                  >
+                    <FontAwesomeIcon icon={faHeart} />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

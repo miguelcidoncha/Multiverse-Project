@@ -23,24 +23,17 @@
     },
     {
       "type": "Figura",
-      "name": "Batman",
-      "price": "87",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
-      "id": 6
-    },
-    {
-      "type": "Comic",
-      "name": "dfhgdah",
-      "price": "5346",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
-      "id": 7
+      "name": "jav",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326501/funko_guason-removebg-preview_ozmh6u.png",
+      "id": 10
     },
     {
       "type": "Poster",
-      "name": "Capitán América",
-      "price": "20",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
-      "id": 8
+      "name": "jav",
+      "price": "2",
+      "image": "https://res.cloudinary.com/duwenv0yr/image/upload/v1692949895/Venom.jpg",
+      "id": 11
     }
   ]
 }

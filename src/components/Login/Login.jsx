@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <div className="register-container">
-      <h2>Registro de Usuario</h2>
+      <h2 class="tittle-user">User Registration:</h2>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -37,31 +37,31 @@ const Login = () => {
         {() => (
           <Form className="register-form">
             <div className="form-group">
-              <label htmlFor="firstName">Nombre</label>
+              <label htmlFor="firstName">Name</label>
               <Field type="text" id="firstName" name="firstName" />
               <ErrorMessage name="firstName" component="div" className="error" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="lastName">Apellidos</label>
+              <label htmlFor="lastName">Last Name</label>
               <Field type="text" id="lastName" name="lastName" />
               <ErrorMessage name="lastName" component="div" className="error" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Correo</label>
+              <label htmlFor="email">Email</label>
               <Field type="email" id="email" name="email" />
               <ErrorMessage name="email" component="div" className="error" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">Contraseña</label>
+              <label htmlFor="password">Password</label>
               <Field type="password" id="password" name="password" />
               <ErrorMessage name="password" component="div" className="error" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="mobile">Móvil</label>
+              <label htmlFor="mobile">Number CellPhone</label>
               <Field type="text" id="mobile" name="mobile" />
               <ErrorMessage name="mobile" component="div" className="error" />
             </div>

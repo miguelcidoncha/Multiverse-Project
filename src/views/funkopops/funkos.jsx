@@ -35,7 +35,7 @@ const Funkos = ({ addToCart }) => {
 
   return (
     <div className="container">
-      <h1>Funko Pops</h1>
+      {/* <h1>Funko Pops</h1> */}
       <div className="row row-cols-1 row-cols-md-4 g-2">
         {funkos.map((funko, idx) => (
           <div key={funko.id} className="col">

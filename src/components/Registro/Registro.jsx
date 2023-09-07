@@ -65,14 +65,14 @@ const Registro = () => {
 
     const handleDelete = async (productId, productName) => {
         const confirmation = await Swal.fire({
-            title: `¿Estás seguro de eliminar ${productName}?`,
-            text: "Esta acción no se puede deshacer.",
+            title: `¿Are you sure to remove ${productName}?`,
+            text: "This action cannot be undone.",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#d33',
             cancelButtonColor: '#aa8caf',
-            cancelButtonText: 'Cancelar',
-            confirmButtonText: 'Sí, Eliminarlo'
+            cancelButtonText: 'Cancel',
+            confirmButtonText: 'Yes, Delete.'
         });
 
         if (confirmation.isConfirmed) {
@@ -81,8 +81,8 @@ const Registro = () => {
                 
                 if (response.status === 200) {
                     Swal.fire(
-                        'Eliminado!',
-                        `Se eliminó con éxito el registro con ID ${productId}!`,
+                        'Delete!',
+                        `The record with the ID was successfully deleted: "${productId}".`,
                         'success'
                     );
                     setUpdateList(!updateList);
@@ -94,7 +94,7 @@ const Registro = () => {
                     );
                 }
             } catch (error) {
-                console.error('Error al eliminar el producto:', error);
+                console.error('Error deleting the product:', error);
             }
         }
     };
@@ -102,17 +102,17 @@ const Registro = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const actionMessage = editProductId ? 'actualizar' : 'guardar';
+        const actionMessage = editProductId ? 'Update' : 'keep';
 
         const confirmation = await Swal.fire({
-            title: `¿Estás seguro de ${actionMessage} este producto?`,
-            text: "Esta acción no se puede deshacer.",
+            title: `¿Are you sure to  ${actionMessage} this product?`,
+            text: "This action can not be undone.",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#007BFF',
             cancelButtonColor: '#aa8caf',
-            cancelButtonText: 'Cancelar',
-            confirmButtonText: `Sí, ${actionMessage.charAt(0).toUpperCase() + actionMessage.slice(1)}lo`
+            cancelButtonText: 'Cancel',
+            confirmButtonText: `Yes, ${actionMessage.charAt(0).toUpperCase() + actionMessage.slice(1)}.`
         });
 
         if (confirmation.isConfirmed) {
@@ -121,8 +121,8 @@ const Registro = () => {
                     const response = await axios.put(`${URL}/${editProductId}`, dataModal);
                     if (response.status === 200) {
                         Swal.fire(
-                            'Actualizado!',
-                            `El producto ha sido actualizado exitosamente!`,
+                            'Updated!',
+                            `The product hs been successfully updated!.`,
                             'success'
                         );
                         handleCloseModal();
@@ -130,7 +130,7 @@ const Registro = () => {
                     } else {
                         Swal.fire(
                             'Error!',
-                            'Hubo un problema al actualizar el producto!',
+                            'There was a problem updating the product!.',
                             'error'
                         );
                     }
@@ -138,8 +138,8 @@ const Registro = () => {
                     const response = await axios.post(URL, dataModal);
                     if (response.status === 201) {
                         Swal.fire(
-                            'Guardado!',
-                            `El nuevo producto ha sido agregado exitosamente!`,
+                            'Save!',
+                            `The new product has been successfully added!`,
                             'success'
                         );
                         handleCloseModal();
@@ -147,7 +147,7 @@ const Registro = () => {
                     } else {
                         Swal.fire(
                             'Error!',
-                            'Hubo un problema al agregar el nuevo producto!',
+                            'there was a problem adding the new product!',
                             'error'
                         );
                     }
@@ -188,22 +188,22 @@ const Registro = () => {
                             <Card.Body className="car-body">
                                 <Card.Title className="text-center">{product.type}</Card.Title>
                                 <ListGroup className="mb-2 mx-5">
-                                    <ListGroupItem><strong>Nombre:</strong>{product.name}</ListGroupItem>
-                                    <ListGroupItem><strong>Precio:</strong>{product.price}</ListGroupItem>
+                                    <ListGroupItem><strong>Name:</strong>{product.name}</ListGroupItem>
+                                    <ListGroupItem><strong>Price:</strong>{product.price}</ListGroupItem>
                                 </ListGroup>
-                                <button className="btn btn-danger me-2" onClick={() => handleDelete(product.id, product.name)}>Eliminar</button>
-                                <button className="btn btn-success me-2" onClick={() => handleEdit(product)}>Editar</button>
+                                <button className="btn btn-danger me-2" onClick={() => handleDelete(product.id, product.name)}>Delete</button>
+                                <button className="btn btn-success me-2" onClick={() => handleEdit(product)}>Edit</button>
                             </Card.Body>
                         </Card>
                     </div>
                 ))}
             </Row>
 
-            <Button onClick={handleOpenModal}>Agregar Nuevo Producto</Button>
+            <Button onClick={handleOpenModal}>Add new Product:</Button>
 
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header>
-                    <Modal.Title>{editProductId ? 'Editar Producto' : 'Agregar Nuevo Producto'}</Modal.Title>
+                    <Modal.Title>{editProductId ? 'Edit Product:' : 'Add New Product'}</Modal.Title>
                 </Modal.Header>
                 <Form onSubmit={handleSubmit}>
                     <Modal.Body>
@@ -215,21 +215,21 @@ const Registro = () => {
                                 required
                                 value={dataModal.type}
                             >
-                                <option value="">Selecciona una opción</option>
+                                <option value="">Select an option:</option>
                                 <option value="Funko">Funko Pop</option>
-                                <option value="Camiseta">Camiseta</option>
-                                <option value="Figura">Figura</option>
+                                <option value="Camiseta">Shirt</option>
+                                <option value="Figura">Figure</option>
                                 <option value="Poster">Poster</option>
                                 <option value="Comic">Comic</option>
                             </select>
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Referencia</Form.Label>
+                            <Form.Label>Reference</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="name"
-                                placeholder="Nombre"
+                                placeholder="Name product"
                                 value={dataModal.name}
                                 onChange={handleNewProductChange}
                                 required
@@ -240,7 +240,7 @@ const Registro = () => {
                             <Form.Control
                                 type="number"
                                 name="price"
-                                placeholder="Precio"
+                                placeholder="Price"
                                 value={dataModal.price}
                                 onChange={handleNewProductChange}
                                 required
@@ -251,7 +251,7 @@ const Registro = () => {
                             <Form.Control
                                 type="text"
                                 name="image"
-                                placeholder="URL de la imagen"
+                                placeholder="URL Image"
                                 value={dataModal.image}
                                 onChange={handleNewProductChange}
                                 required
@@ -259,8 +259,8 @@ const Registro = () => {
                         </Form.Group>
                     </Modal.Body>
                     <Modal.Footer>
-                        <button className="btn btn-secondary" type="button" onClick={handleCloseModal}>Cancelar</button>
-                        <button className="btn btn-success mb-3" type="submit">{editProductId ? 'Actualizar' : 'Guardar'}</button>
+                        <button className="btn btn-secondary" type="button" onClick={handleCloseModal}>Cancel</button>
+                        <button className="btn btn-success mb-3" type="submit">{editProductId ? 'Update' : 'Keep'}</button>
                     </Modal.Footer>
                 </Form>
             </Modal>

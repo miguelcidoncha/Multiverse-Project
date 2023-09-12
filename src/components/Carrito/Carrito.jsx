@@ -33,7 +33,7 @@ const Carrito = () => {
 
   return (
     <div>
-      <h1>Carrito de Compras</h1>
+      {/* <h1>Carrito de Compras</h1> */}
       {/* Renderiza la lista de productos en el carrito */}
       <ul>
         {carrito.map((item, index) => (

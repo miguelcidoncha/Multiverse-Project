@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import '../figures/figures.css'
 
 
 const Figures = ({ addToCart }) => {
@@ -9,7 +10,7 @@ const Figures = ({ addToCart }) => {
 
   useEffect(() => {
     // Realiza una solicitud para obtener los productos de la categoría "Figura" desde tu API.
-    axios.get('http://localhost:3000/products?type=Figura')
+    axios.get('http://localhost:3000/products?type=Figure')
       .then((response) => {
         setFigures(response.data);
       })
@@ -37,14 +38,14 @@ const Figures = ({ addToCart }) => {
       <div className="row row-cols-1 row-cols-md-4 g-2">
         {figures.map((figure, idx) => (
           <div key={figure.id} className="col">
-            <div className="card mb-3">
-              <img src={figure.image} alt={figure.type} className="card-img-top image-card" />
+            <div className="cardf m-3">
+              <img src={figure.image} alt={figure.type} className="cardf-img" />
               <div className="card-body">
                 <h5 className="card-title text-center">{figure.type}</h5>
                 <p className="card-text text-center">{figure.name}</p>
                 <p className="card-text text-center"> {figure.price}€</p>
                 <div className="d-flex justify-content-between align-items-center">
-                  <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(figure)}>Añadir al carrito</button>
+                  <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(figure)}>Add to cart</button>
                   <button
                     className="btn btn-link"
                     style={{

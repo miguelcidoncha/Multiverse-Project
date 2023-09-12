@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './index.css';
+import './main.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
-import Registro from './components/Registro/Registro';
+import Register from './components/Register/Register';
 import NavbarView from './components/Nav/Nav.jsx';
 import Home from './views/Home/Home';
 import Carrito from './components/Carrito/Carrito';
@@ -26,9 +26,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <NavbarView />
       
       <div className="content">
+
         <Routes>
+          
           <Route path="/" element={<Home />} />
-          <Route path="/registro" element={<Registro />} />
+          <Route path="/register" element={<Register />} />
           <Route path='/login' element={<Login/>} /> 
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/comics" element={<Comics />} />

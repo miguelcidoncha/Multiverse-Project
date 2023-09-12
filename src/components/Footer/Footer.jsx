@@ -2,6 +2,7 @@ import './footer.css';
 
 function Footer() {
   return (
+    <div className="footer">
     <div className="footer-container">
       <div className="column">
         <h6>Contacto</h6>
@@ -35,6 +36,7 @@ function Footer() {
       <div className="styled-footer">
         <p>&copy; 2023 Multiverse</p>
       </div>
+    </div>
     </div>
   );
 }

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Container, Form, Modal, Row, Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import Swal from 'sweetalert2';
-import './Registro.css';
+import './Register.css';
 
-const Registro = () => {
+const Register = () => {
     const URL = "http://localhost:3000/products";
 
     const getData = async () => {
@@ -179,27 +179,32 @@ const Registro = () => {
     }, [editProductId, list]);
 
     return (
-        <Container className='mb-5 mt-5'>
-            <Row>
+        <Container id='container1' className='mb-5 mt-5'>
+
+             <Button id='buttom-add-new' onClick={handleOpenModal}>Add new Product:</Button>
+           
+           <Row>
                 {list.map((product, index) => (
                     <div key={index} className="col-4 mb-3">
                         <Card>
                             <img src={product.image} alt={product.type} className="card-img top image-card" />
-                            <Card.Body className="car-body">
+                            <Card.Body className="card-body">
                                 <Card.Title className="text-center">{product.type}</Card.Title>
                                 <ListGroup className="mb-2 mx-5">
                                     <ListGroupItem><strong>Name:</strong>{product.name}</ListGroupItem>
                                     <ListGroupItem><strong>Price:</strong>{product.price}</ListGroupItem>
                                 </ListGroup>
-                                <button className="btn btn-danger me-2" onClick={() => handleDelete(product.id, product.name)}>Delete</button>
-                                <button className="btn btn-success me-2" onClick={() => handleEdit(product)}>Edit</button>
+                                <div id='mix'>
+                                <button className="btn btn-danger me-3" onClick={() => handleDelete(product.id, product.name)}>Delete</button>
+                                <button className="btn btn-success me-3" onClick={() => handleEdit(product)}>Edit</button>
+                                </div>
                             </Card.Body>
                         </Card>
                     </div>
                 ))}
             </Row>
 
-            <Button onClick={handleOpenModal}>Add new Product:</Button>
+           
 
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header>
@@ -217,8 +222,8 @@ const Registro = () => {
                             >
                                 <option value="">Select an option:</option>
                                 <option value="Funko">Funko Pop</option>
-                                <option value="Camiseta">Shirt</option>
-                                <option value="Figura">Figure</option>
+                                <option value="Shirt">Shirt</option>
+                                <option value="Figure">Figure</option>
                                 <option value="Poster">Poster</option>
                                 <option value="Comic">Comic</option>
                             </select>
@@ -268,4 +273,4 @@ const Registro = () => {
     );
 };
 
-export default Registro;
+export default Register;

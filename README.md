@@ -79,26 +79,7 @@ Screen images will be available here shortly. Stay tuned! <br>
 1. Clone the GitHub repository: https://github.com/miguelcidoncha/Multiverse-Proyect
 2. Open the file using Visual Studio Code.
 3. Open the terminal in Visual Studio Code.
-4. Install the following commands: <br>
-   ● **npm install <br>
-   ● npm install axios <br>
-   ● npm i json-server <br>
-   ● npm i vite <br>
-   ● npm i vitest <br>
-   ● npm install --save-dev jest <br>
-   ● npm install --save-dev @testing-library/react <br>
-   ● npm i react-router-dom <br>
-   ● npm install react-hook-form <br>
-   ● npm install react-bootstrap bootstrap <br>
-   ● npm install primereact <br>
-   ● npm install swiper <br>
-   ● npm install sweetalert2 <br>
-   ● npm i yup <br>
-   ● npm install formik --save <br>
-   ● npm init @eslint/config <br>
-   ● npm install @fortawesome/fontawesome-free@6.4.2 <br>
-   ● npm install @fortawesome/free-solid-svg-icons@6.4.2 <br>
-   ● npm install @fortawesome/react-fontawesome@0.2.0**  <br> 
+4. Install the following command: **npm i**
 5. Once the component installations are complete, in a new terminal, run **npm run dev**. Open the **localhost**: that appears.
 6. In a new terminal, run the command **json-server --watch cards.json**. Open the **localhost**: that appears.
 7. Now you can view not only the static Front-end web page but also add, modify, and delete the content of the cards through the Fake API.

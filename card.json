@@ -9,9 +9,10 @@
     },
     {
       "type": "Poster",
-      "name": "jav",
-      "price": "2",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326501/funko_guason-removebg-preview_ozmh6u.png",
+      "name": "VENOM POSTER",
+      "description": "Brishante.",
+      "price": "15",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508504/Venom_gmontt.png",
       "id": 11
     },
     {
@@ -53,21 +54,21 @@
       "type": "Poster",
       "name": "jav",
       "price": "10",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326501/funko_guason-removebg-preview_ozmh6u.png",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508183/Harry_Potter_etor7k.png",
       "id": 19
     },
     {
       "type": "Poster",
       "name": "vea",
       "price": "1",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508183/Harry_ggwqqo.png",
       "id": 20
     },
     {
       "type": "Poster",
       "name": "wgtg",
       "price": "2",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326501/funko_guason-removebg-preview_ozmh6u.png",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508318/Spiderman_ti3mtw.png",
       "id": 25
     },
     {
@@ -214,28 +215,28 @@
       "type": "Poster",
       "name": "Mensaje ",
       "price": "1",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508589/Civil_War_jyvaxc.png",
       "id": 47
     },
     {
       "type": "Poster",
       "name": "Mensaje ",
       "price": "2",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424710/funko_goku_ssj-removebg-preview_tkgrh1.png",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508592/The_Batman_d5u0xm.png",
       "id": 48
     },
     {
       "type": "Poster",
       "name": "Mensaje ",
       "price": "1",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424912/fa_goku-removebg-preview_ug185c.png",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508594/The_Witcher_xo1zqx.png",
       "id": 49
     },
     {
       "type": "Poster",
       "name": "Mensaje ",
       "price": "4",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424912/fa_goku-removebg-preview_ug185c.png",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508596/Joker_oprgym.png",
       "id": 50
     }
   ]

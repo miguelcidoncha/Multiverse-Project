@@ -24,6 +24,11 @@ align-items: center;
   justify-content:center;
 }
 
+.card-img{
+  width: 150px;
+height: 200px;
+}
+
 .card-customer {
   width: 20px; /* Tamaño cuadrado */
   height: 520px; /* Tamaño cuadrado */

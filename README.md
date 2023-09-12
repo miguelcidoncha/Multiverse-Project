@@ -79,7 +79,7 @@ Screen images will be available here shortly. Stay tuned! <br>
 1. Clone the GitHub repository: https://github.com/miguelcidoncha/Multiverse-Proyect
 2. Open the file using Visual Studio Code.
 3. Open the terminal in Visual Studio Code.
-4. Install the following command: **npm i**
+4. Install the following command: **npm i.**
 5. Once the component installations are complete, in a new terminal, run **npm run dev**. Open the **localhost**: that appears.
 6. In a new terminal, run the command **json-server --watch cards.json**. Open the **localhost**: that appears.
 7. Now you can view not only the static Front-end web page but also add, modify, and delete the content of the cards through the Fake API.

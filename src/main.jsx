@@ -17,14 +17,11 @@ import Shirts from './views/shirts/shirts';
 import Login from './components/Login/Login';
 
 
-
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Header />
       <NavbarView />
-      
       <div className="content">
 
         <Routes>
@@ -38,13 +35,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/funkos" element={<Funkos />} />
           <Route path="/posters" element={<Posters />} />
           <Route path="/shirts" element={<Shirts />} />
-          
         </Routes>
       </div>
       <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
-
-
-

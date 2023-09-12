@@ -24,5 +24,8 @@ describe('Header', () => {
 
     const cartLink = screen.getByTestId('cart-link');
     expect(cartLink).toBeInTheDocument();
+
+    const heartLink = screen.getByTestId('heart-link');
+    expect(heartLink).toBeInTheDocument();
   });
 });

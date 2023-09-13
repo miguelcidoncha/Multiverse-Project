@@ -20,12 +20,12 @@ import Loginview from './views/login/login';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
+    <div className='scroll'>
+      <Header/>
       <NavbarView />
       <div className="content">
 
         <Routes>
-          
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path='/login' element={<Loginview/>} /> 
@@ -37,7 +37,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/shirts" element={<Shirts />} />
         </Routes>
       </div>
-      <Footer />
+      <Footer/>
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );

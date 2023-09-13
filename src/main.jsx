@@ -4,10 +4,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
-import Registro from './components/Registro/Registro';
+import Register from './components/Register/Register';
 import NavbarView from './components/Nav/Nav.jsx';
 import Home from './views/Home/Home';
-import Carrito from './components/Carrito/Carrito';
+import Cart from './components/Cart/Cart';
 import Footer from './components/Footer/Footer.jsx';
 import Comics from './views/comics/comics';
 import Figures from './views/figures/figures';
@@ -15,6 +15,8 @@ import Funkos from './views/funkopops/funkos';
 import Posters from './views/posters/poster';
 import Shirts from './views/shirts/shirts';
 import Login from './components/Login/Login';
+
+
 
 
 
@@ -28,9 +30,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/registro" element={<Registro />} />
+          <Route path="/register" element={<Register />} />
           <Route path='/login' element={<Login/>} /> 
-          <Route path="/carrito" element={<Carrito />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/comics" element={<Comics />} />
           <Route path="/figuras" element={<Figures />} />
           <Route path="/funkos" element={<Funkos />} />

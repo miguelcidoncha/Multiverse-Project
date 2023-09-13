@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Container, Form, Modal, Row, Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import Swal from 'sweetalert2';
-import './Registro.css';
+import './Register.css';
 
-const Registro = () => {
+const Register = () => {
     const URL = "http://localhost:3000/products";
 
     const getData = async () => {
@@ -268,4 +268,4 @@ const Registro = () => {
     );
 };
 
-export default Registro;
+export default Register;

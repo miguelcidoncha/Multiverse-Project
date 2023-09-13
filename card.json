@@ -9,38 +9,31 @@
     },
     {
       "type": "Camiseta",
-      "name": "Rebeca Poma",
-      "price": "2",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693361995/fa_hulk_adco0h.jpg",
+      "name": "Esqueleto",
+      "price": "12",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1694422652/cami_one_2-removebg-preview_g47has.png",
       "id": 4
     },
     {
       "type": "Camiseta",
-      "name": "Laura",
-      "price": "25356",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
+      "name": "Jack",
+      "price": "16",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1694422697/cami_jack-removebg-preview_tknqjb.png",
       "id": 5
     },
     {
       "type": "Figura",
       "name": "Batman",
       "price": "87",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1694422565/fa_capitan_america-removebg-preview_ghdngi.png",
       "id": 6
     },
     {
       "type": "Comic",
-      "name": "dfhgdah",
-      "price": "5346",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
+      "name": "Naruto",
+      "price": "16",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322638/Naruto_jhomgv.png",
       "id": 7
-    },
-    {
-      "type": "Poster",
-      "name": "Capitán América",
-      "price": "20",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322678/fa_capitan_america_wpdxfa.jpg",
-      "id": 8
     }
   ]
 }

@@ -11,7 +11,7 @@ const Header = () => {
         </div>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/registro"><i className="fas fa-user-secret"></i></Link></li>
+          <li><Link to="/register"><i className="fas fa-user-secret"></i></Link></li>
           <li><Link to="/login">Login</Link></li> 
           <li><Link to="/carrito">🛒</Link></li>
         </ul>

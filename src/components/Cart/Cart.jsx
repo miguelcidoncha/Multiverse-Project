@@ -1,25 +1,6 @@
-// import React from 'react';
-
-
-// const Carrito = () => {
-//   return (
-//     <div>
-     
-//       <h1>Carrito</h1>
-      
-//     </div>
-//   );
-// };
-
-// export default Carrito;
-
-
-
-
-
 import React, { useState } from 'react';
 
-const Carrito = () => {
+const Cart = () => {
   const [carrito, setCarrito] = useState([]);
   // Opcional: Puedes agregar un estado para el total del carrito.
   // const [total, setTotal] = useState(0);
@@ -46,7 +27,7 @@ const Carrito = () => {
   );
 };
 
-export default Carrito;
+export default Cart;
 
 
 

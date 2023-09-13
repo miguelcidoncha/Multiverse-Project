@@ -2,11 +2,12 @@ import './footer.css';
 
 function Footer() {
   return (
+    <div className="footer">
     <div className="footer-container">
       <div className="column">
         <h6>Contacto</h6>
-        <p>924 00 00 06 - Prado / Pedidos Web</p>
-        <p>612 612 356 - Calle Mérida</p>
+        <p data-testid="phone-number">924 00 00 06 - Prado / Pedidos Web</p>
+        <p data-testid="phone-number">612 612 356 - Calle Mérida</p>
         <p>tienda@mundofriki.es</p>
       </div>
       <div className="column">
@@ -16,7 +17,7 @@ function Footer() {
             <i className="fab fa-twitter"></i>
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-facebook"></i>
+            <i className="fab fa-facebook"></i>
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram"></i>
@@ -35,6 +36,7 @@ function Footer() {
       <div className="styled-footer">
         <p>&copy; 2023 Multiverse</p>
       </div>
+    </div>
     </div>
   );
 }

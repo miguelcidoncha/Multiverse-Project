@@ -35,17 +35,18 @@ const Comics = ({ addToCart }) => {
 
   return (
     <div className="container">
+      <main></main>
       <div className="row row-cols-1 row-cols-md-4 g-2">
         {comics.map((comic, idx) => (
           <div key={comic.id} className="col">
             <div className="card1 m-3">
-              <img src={comic.image} alt={comic.type} className="card1-img-center image-card" />
+              <img src={comic.image} alt={comic.type} className="card1-img-center" />
               <div className="card-body">
                 <h5 className="card1-title text-center">{comic.type}</h5>
                 <p className="card1-text text-center"> {comic.name}</p>
                 <p className="card1-text text-center"> {comic.price}€</p>
                 <div className="d-flex justify-content-between align-items-center">
-                  <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(comic)}>Añadir al carrito</button>
+                  <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(comic)}>Add to Cart</button>
                   <button
                     className="btn btn-link"
                     style={{

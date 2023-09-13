@@ -3,37 +3,241 @@
     {
       "type": "Funko",
       "name": "Batman",
-      "price": "3636",
+      "price": "20",
       "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
       "id": 3
     },
     {
-      "type": "Camiseta",
-      "name": "Esqueleto",
-      "price": "12",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1694422652/cami_one_2-removebg-preview_g47has.png",
-      "id": 4
-    },
-    {
-      "type": "Camiseta",
-      "name": "Jack",
-      "price": "16",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1694422697/cami_jack-removebg-preview_tknqjb.png",
-      "id": 5
-    },
-    {
-      "type": "Figura",
-      "name": "Batman",
-      "price": "87",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1694422565/fa_capitan_america-removebg-preview_ghdngi.png",
-      "id": 6
+      "type": "Poster",
+      "name": "VENOM POSTER",
+      "description": "Brishante.",
+      "price": "15",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508504/Venom_gmontt.png",
+      "id": 11
     },
     {
       "type": "Comic",
-      "name": "Naruto",
-      "price": "16",
-      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322638/Naruto_jhomgv.png",
-      "id": 7
+      "name": "jav",
+      "price": "2",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
+      "id": 14
+    },
+    {
+      "type": "Comic",
+      "name": "Mensaje ",
+      "price": "13652",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
+      "id": 15
+    },
+    {
+      "type": "Comic",
+      "name": "Javier",
+      "price": "2",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
+      "id": 16
+    },
+    {
+      "type": "Comic",
+      "name": "Javier",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dit2zhtwz/image/upload/v1693322349/funko_batman-removebg-preview_eizguz.png",
+      "id": 17
+    },
+    {
+      "type": "Comic",
+      "name": "Laura",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326501/funko_guason-removebg-preview_ozmh6u.png",
+      "id": 18
+    },
+    {
+      "type": "Poster",
+      "name": "jav",
+      "price": "10",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508183/Harry_Potter_etor7k.png",
+      "id": 19
+    },
+    {
+      "type": "Poster",
+      "name": "vea",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508183/Harry_ggwqqo.png",
+      "id": 20
+    },
+    {
+      "type": "Poster",
+      "name": "wgtg",
+      "price": "2",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508318/Spiderman_ti3mtw.png",
+      "id": 25
+    },
+    {
+      "type": "Figure",
+      "name": "Guason",
+      "price": "20",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424912/fa_guason-removebg-preview_w3u2fj.png",
+      "id": 26
+    },
+    {
+      "type": "Figure",
+      "name": "Mensaje ",
+      "price": "15",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424912/fa_hulk-removebg-preview_eigpo8.png",
+      "id": 27
+    },
+    {
+      "type": "Figure",
+      "name": "Mensaje ",
+      "price": "20",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424913/fa_ironman-removebg-preview_ieri2e.png",
+      "id": 28
+    },
+    {
+      "type": "Figure",
+      "name": "Mensaje ",
+      "price": "4",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424912/fa_goku-removebg-preview_ug185c.png",
+      "id": 29
+    },
+    {
+      "type": "Figure",
+      "name": "Mensaje ",
+      "price": "3",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424912/fa_goku-removebg-preview_ug185c.png",
+      "id": 30
+    },
+    {
+      "type": "Funko",
+      "name": "Mensaje ",
+      "price": "10",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424710/funko_goku_ssj-removebg-preview_tkgrh1.png",
+      "id": 31
+    },
+    {
+      "type": "Funko",
+      "name": "Mensaje ",
+      "price": "15",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424693/funko_majin_boo-removebg-preview_vf4yhz.png",
+      "id": 33
+    },
+    {
+      "type": "Funko",
+      "name": "Mensaje ",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694424693/funko_ironman-removebg-preview_vsbtpu.png",
+      "id": 34
+    },
+    {
+      "type": "Funko",
+      "name": "wgtg",
+      "price": "2",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326501/funko_superman-removebg-preview_yu2nkl.png",
+      "id": 35
+    },
+    {
+      "type": "Funko",
+      "name": "Mensaje ",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326502/FunkoSpiderman_fqnzax.png",
+      "id": 36
+    },
+    {
+      "type": "Funko",
+      "name": "Mensaje ",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326500/funko_freezer_1-removebg-preview_oxruqg.png",
+      "id": 37
+    },
+    {
+      "type": "Funko",
+      "name": "vea",
+      "price": "3",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326501/funko_guason-removebg-preview_ozmh6u.png",
+      "id": 38
+    },
+    {
+      "type": "Shirt",
+      "name": "Mensaje ",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436933/cami_rubio-removebg-preview_wamwch.png",
+      "id": 39
+    },
+    {
+      "type": "Shirt",
+      "name": "Mensaje ",
+      "price": "2",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436933/cami_one_2-removebg-preview_mkpc0l.png",
+      "id": 40
+    },
+    {
+      "type": "Shirt",
+      "name": "Mensaje ",
+      "price": "3",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436933/images-removebg-preview_hmtllo.png",
+      "id": 41
+    },
+    {
+      "type": "Shirt",
+      "name": "Mensaje ",
+      "price": "5",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436933/cami_espiritu-removebg-preview_nubxmt.png",
+      "id": 42
+    },
+    {
+      "type": "Shirt",
+      "name": "Mensaje ",
+      "price": "11",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436932/Camiseta_One_Piece_gtslii.png",
+      "id": 43
+    },
+    {
+      "type": "Shirt",
+      "name": "Mensaje ",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436932/cara-kawaii-camiseta-mujer-removebg-preview_he42ea.png",
+      "id": 44
+    },
+    {
+      "type": "Shirt",
+      "name": "Mensaje ",
+      "price": "2",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436932/cami_goku-removebg-preview_qtqzig.png",
+      "id": 45
+    },
+    {
+      "type": "Shirt",
+      "name": "Mensaje ",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436932/cami_jack-removebg-preview_okmluu.png",
+      "id": 46
+    },
+    {
+      "type": "Poster",
+      "name": "Mensaje ",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508589/Civil_War_jyvaxc.png",
+      "id": 47
+    },
+    {
+      "type": "Poster",
+      "name": "Mensaje ",
+      "price": "2",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508592/The_Batman_d5u0xm.png",
+      "id": 48
+    },
+    {
+      "type": "Poster",
+      "name": "Mensaje ",
+      "price": "1",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508594/The_Witcher_xo1zqx.png",
+      "id": 49
+    },
+    {
+      "type": "Poster",
+      "name": "Mensaje ",
+      "price": "4",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508596/Joker_oprgym.png",
+      "id": 50
     }
   ]
 }

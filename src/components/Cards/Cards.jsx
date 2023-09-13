@@ -14,23 +14,25 @@ function Cards() {
     const products = [
    
      {
-          title: 'Funko',
+          title: 'Funko-Guason',
           imageSrc: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326501/funko_guason-removebg-preview_ozmh6u.png',
-          description: 'Descripción del producto 4...',
+          description: 'DC Comics / FunkoPop...',
         },
         {
-            title: 'Funko',
+            title: 'Funko-Superma',
             imageSrc: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1693326501/funko_superman-removebg-preview_yu2nkl.png',
-            description: 'Descripción del producto 1...',
+            description: 'DC Comics / FunkoPop...',
           },
           {
-            title: 'Funko',
+            title: 'Funko-Spiderma',
             imageSrc: 'https://res.cloudinary.com/duwenv0yr/image/upload/v1693303883/FunkoSpiderman_mhetsb.png',
-            description: 'Descripción del producto 1...',
+            description: 'Marvel / FunkoPop...',
           },
         
    
           ];
+
+          
 
     const [likedProducts, setLikedProducts] = useState(
         products.map(() => false)
@@ -51,22 +53,27 @@ function Cards() {
       {products.map((product, idx) => (
         <Col key={idx}>
           <Card>
+          <div className='new-label'> NEW </div>
             <Card.Img src={product.imageSrc} />
-            <Card.Body>
+            <Card.Body>  
+              
               <Card.Title>{product.title}</Card.Title>
               <Card.Text>{product.description}</Card.Text>
-              <Button className='button-buy' variant="primary">Buy Now</Button>{' '}
-              <Button className=''
-                  variant="link"
-                  style={{
-                    color: likedProducts[idx] ? 'red' : 'white', // Cambiar colores aquí
-                  }}
-                  onClick={() => handleLikeClick(idx)}
-            
-                >
-  <FontAwesomeIcon icon={faHeart} />
-</Button>
+      <div className='buttoms'>
+        <Button className='button-buy-now-home' variant="primary">Buy Now</Button>{' '}
+          <Button className='button-like' 
+                            variant="link"
+                            style={{
+                              color: likedProducts[idx] ? 'red' : 'white', // Cambiar colores aquí
+                                          }}
+                            onClick={() => handleLikeClick(idx)}
+                          >
+            <FontAwesomeIcon icon={faHeart} />
+          </Button>
+      </div>
+      
             </Card.Body>
+         
           </Card>
         </Col>
       ))}
@@ -74,5 +81,6 @@ function Cards() {
     </Container>
   );
 }
+
 
 export default Cards;

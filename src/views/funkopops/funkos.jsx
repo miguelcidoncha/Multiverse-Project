@@ -35,17 +35,18 @@ const Funkos = ({ addToCart }) => {
 
   return (
     <div className="container">
+      {/* <h1>Funko Pops</h1> */}
       <div className="row row-cols-1 row-cols-md-4 g-2">
         {funkos.map((funko, idx) => (
           <div key={funko.id} className="col">
-            <div className="card mb-3">
-              <img src={funko.image} alt={funko.type} className="card-img-top image-card" />
+            <div className="card m-3">
+              <img src={funko.image} alt={funko.type} className="card-img" />
               <div className="card-body">
                 <h5 className="card-title text-center">{funko.type}</h5>
                 <p className="card-text text-center"> {funko.name}</p>
                 <p className="card-text text-center"> {funko.price}€</p>
                 <div className="d-flex justify-content-between align-items-center">
-                  <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(funko)}>Añadir al carrito</button>
+                  <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(funko)}>Add to cart</button>
                   <button
                     className="btn btn-link"
                     style={{

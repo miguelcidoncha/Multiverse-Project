@@ -236,7 +236,7 @@ const Register = () => {
                     className="btn btn-danger me-3"
                     onClick={() => handleDelete(product.id, product.name)}
                   >
-                    Delete
+                    🗑️
                   </button>
                   <button
                     className="btn btn-success me-3"

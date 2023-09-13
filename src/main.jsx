@@ -14,7 +14,7 @@ import Figures from './views/figures/figures';
 import Funkos from './views/funkopops/funkos';
 import Posters from './views/posters/poster';
 import Shirts from './views/shirts/shirts';
-import Login from './components/Login/Login';
+import Loginview from './views/login/login';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -28,7 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
-          <Route path='/login' element={<Login/>} /> 
+          <Route path='/login' element={<Loginview/>} /> 
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/comics" element={<Comics />} />
           <Route path="/figuras" element={<Figures />} />

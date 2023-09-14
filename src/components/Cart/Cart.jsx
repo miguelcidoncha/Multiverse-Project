@@ -1,79 +1,56 @@
-// import React from 'react';
+import React, { useState, useEffect } from 'react';
+import '../Cart/Cart.css';
 
-// const Cart = ({ cart }) => {
-//   const removeItemFromCart = (index) => {
-//     const updatedCart = [...cart];
-//     updatedCart.splice(index, 1);
-//     // Aquí necesitas agregar la lógica para actualizar el carrito
-//     // Puedes usar una función prop para hacerlo.
-//   };
+const Cart = ({ cart, removeFromCart }) => {
+  const [productQuantities, setProductQuantities] = useState(
+    cart.reduce((quantities, _) => {
+      quantities.push(1); // Inicializa todas las cantidades en 1 por defecto
+      return quantities;
+    }, [])
+  );
 
-//   return (
-//     <div>
-//       <h2>Shopping Cart</h2>
-//       <table className="table">
-//         <thead>
-//           <tr>
-//             <th>Product</th>
-//             <th>Name</th>
-//             <th>Description</th>
-//             <th>Price</th>
-//             <th>Remove</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {cart.map((item, index) => (
-//             <tr key={index}>
-//               <td>
-//                 <img src={item.image} alt={item.name} width="50" height="50" />
-//               </td>
-//               <td>{item.name}</td>
-//               <td>{item.description}</td>
-//               <td>{item.price}€</td>
-//               <td>
-//                 <button
-//                   className="btn btn-danger btn-sm"
-//                   onClick={() => removeItemFromCart(index)}
-//                 >
-//                 🗑️
-//                 </button>
-//               </td>
-//             </tr>
-//           ))}
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// };
+  const [totalPrice, setTotalPrice] = useState(0);
 
-// export default Cart;
+  useEffect(() => {
+    // Calcula la suma total de los precios teniendo en cuenta la cantidad de cada producto
+    const total = cart.reduce((sum, item, index) => {
+      return sum + item.price * productQuantities[index];
+    }, 0);
+    setTotalPrice(total);
+  }, [cart, productQuantities]);
 
-
-
-
-import React from 'react';
-import './Cart.css';
-
-const Cart = ({ cart, setCart }) => {
   const removeItemFromCart = (index) => {
-    const updatedCart = [...cart];
-    updatedCart.splice(index, 1);
-    setCart(updatedCart); // Actualiza el estado del carrito
+    removeFromCart(index);
+  };
+
+  const incrementQuantity = (index) => {
+    const newQuantities = [...productQuantities];
+    newQuantities[index]++;
+    setProductQuantities(newQuantities);
+  };
+
+  const decrementQuantity = (index) => {
+    const newQuantities = [...productQuantities];
+    if (newQuantities[index] > 1) {
+      newQuantities[index]--;
+      setProductQuantities(newQuantities);
+    }
   };
 
   return (
-    <div>
-      <h2 className='shopping'>Shopping Cart</h2>
+    <div className='cart-container' >
       <table className="table">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Remove</th>
-          </tr>
-        </thead>
+      <thead>
+  <tr>
+    <th className="custom-cell">Product</th>
+    <th className="custom-cell">Name</th>
+    <th className="custom-cell">Description</th>
+    <th className="custom-cell">Price</th>
+    <th className="custom-cell">Quantity</th>
+    <th className="custom-cell">Remove</th>
+  </tr>
+</thead>
+
         <tbody>
           {cart.map((item, index) => (
             <tr key={index}>
@@ -83,6 +60,21 @@ const Cart = ({ cart, setCart }) => {
               <td>{item.name}</td>
               <td>{item.description}</td>
               <td>{item.price}€</td>
+              <td>
+                <button
+                  className="btn btn-sm"
+                  onClick={() => decrementQuantity(index)}
+                >
+                  -
+                </button>
+                {productQuantities[index]}
+                <button
+                  className="btn btn-sm"
+                  onClick={() => incrementQuantity(index)}
+                >
+                  +
+                </button>
+              </td>
               <td>
                 <button
                   className="btn btn-danger btn-sm"
@@ -95,6 +87,15 @@ const Cart = ({ cart, setCart }) => {
           ))}
         </tbody>
       </table>
+      <div style={{ textAlign: 'center' }}>
+        <p style={{ backgroundColor: 'blue', padding: '10px', color: 'white', textAlign: 'center' }}>
+        Total Price: {totalPrice}€
+      </p>
+      <button className="btn btn-success mt-5 " onClick={() => { /* Agrega la función de pago aquí si es necesario */ }}>
+     Pay Now
+    </button>
+      </div>
+      
     </div>
   );
 };

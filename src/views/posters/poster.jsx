@@ -67,21 +67,24 @@
 // export default Posters;
 
 
-//_______________________________________________________________________________________________________________
+// _______________________________________________________________________________________________________________
+
+
+
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import '../posters/poster.css'; // Importa tu archivo de estilos CSS
+import '../posters/poster.css';
 
 const Posters = ({ addToCart }) => {
   const [posters, setPosters] = useState([]);
+  const [likedProduct, setLikedProduct] = useState(posters.map(() => false));
 
   useEffect(() => {
     // Realiza una solicitud para obtener los productos de la categoría "Poster" desde tu API.
-    axios
-      .get('http://localhost:3000/products?type=Poster')
+    axios.get('http://localhost:3000/products?type=Poster')
       .then((response) => {
         setPosters(response.data);
       })
@@ -94,10 +97,6 @@ const Posters = ({ addToCart }) => {
     addToCart(product);
   };
 
-  const [likedProduct, setLikedProduct] = useState(
-    posters.map(() => false)
-  );
-
   const handleLikeClick = (idx) => {
     const updatedLikedProduct = [...likedProduct];
     updatedLikedProduct[idx] = !updatedLikedProduct[idx];
@@ -105,11 +104,12 @@ const Posters = ({ addToCart }) => {
   };
 
   return (
-    <div className="container">
-      <div className="row row-cols-1 row-cols-md-1 g-2">
+    <div className="containerposter">
+      <div className="row row-cols-1 row-cols-md-10">
         {posters.map((poster, idx) => (
           <div key={poster.id} className="col">
-            <div className="cardP m-2">
+            <div className="cardP">
+            {/* <div className='new-label'> NEW </div> */}
               <img src={poster.image} alt={poster.type} className="cardP-img" />
               <div className="card-body">
                 {/* <h6 className="card-title text-center">{poster.type}</h6> */}
@@ -140,63 +140,3 @@ const Posters = ({ addToCart }) => {
 
 export default Posters;
 
-//___________________________________________________________________________________
-
-// import React from 'react';
-// import {MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol} from 'mdb-react-ui-kit';
-// import '../posters/poster.css';
-
-// export default function App() {
-//   return (
-//     <MDBCard style={{ maxWidth: '540px' }}>
-//       <MDBRow className='g-0'>
-//         <MDBCol md='4'>
-//           <MDBCardImage src='' alt='...' fluid />
-//         </MDBCol>
-//         <MDBCol md='8'>
-//           <MDBCardBody>
-//             <MDBCardTitle>Card title</MDBCardTitle>
-//             <MDBCardText>
-//               This is a wider card with supporting text below as a natural lead-in to additional content. This
-//               content is a little bit longer.
-//             </MDBCardText>
-//             <MDBCardText>
-//               <small className='text-muted'>Last updated 3 mins ago</small>
-//             </MDBCardText>
-//           </MDBCardBody>
-//         </MDBCol>
-//       </MDBRow>
-//     </MDBCard>
-//   );
-// }
-
-//__________________________________________________________________________
-// import React from 'react';
-// import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-// // import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-// // import "@fortawesome/fontawesome-free/css/all.min.css";
-// // import '../posters/poster.css';
-
-// export default function App({ poster }) { // Asegúrate de pasar el objeto poster como una prop
-//   return (
-//     <MDBCard style={{Width: '840px' }}>
-//       <MDBRow className='g-0'>
-//         <MDBCol md='4'>
-//           <MDBCardImage style={{ maxWidth: '150px', Height: '200px'}} src="https://res.cloudinary.com/duwenv0yr/image/upload/v1692949895/Venom.jpg" fluid /> {/* Utiliza poster.image y poster.type */}
-//         </MDBCol>
-//         <MDBCol md='8'>
-//           <MDBCardBody>
-//             <MDBCardTitle>Card title</MDBCardTitle>
-//             <MDBCardText>
-//               This is a wider card with supporting text below as a natural lead-in to additional content. This
-//               content is a little bit longer.
-//             </MDBCardText>
-//             <MDBCardText>
-//               <small className='text-muted'>Last updated 3000000 mins ago</small>
-//             </MDBCardText>
-//           </MDBCardBody>
-//         </MDBCol>
-//       </MDBRow>
-//     </MDBCard>
-//   );
-// }

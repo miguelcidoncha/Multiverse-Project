@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import '../figures/figures.css'
-
+import '../figures/figures.css';
 
 const Figures = ({ addToCart }) => {
   const [figures, setFigures] = useState([]);
+  const [likedProduct, setLikedProduct] = useState([]);
 
   useEffect(() => {
     // Realiza una solicitud para obtener los productos de la categoría "Figura" desde tu API.
@@ -22,10 +22,6 @@ const Figures = ({ addToCart }) => {
   const handleAddToCart = (product) => {
     addToCart(product);
   };
-
-  const [likedProduct, setLikedProduct] = useState(
-    figures.map(() => false)
-  );
 
   const handleLikeClick = (idx) => {
     const updatedLikedProduct = [...likedProduct];

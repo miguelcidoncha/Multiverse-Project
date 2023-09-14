@@ -17,18 +17,18 @@ function MainBody() {
       <Cards2 />
 
       <div id="add">
-        <h2 className="subtitle">¡It's cool to be a Friki!</h2>
+        <h2 className="subtitle"> ¡ It´s cool to be a Friki!</h2>
         <div id="friki">
           <div>
             <h5>Shipments in a maximum of 72Hrs.</h5>
             <div className="gif">
-                <img className="gif" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1694681109/6dccd933044cbb35706643671ad659da_w200_dsxncx.gif" alt="gif-72hrs" />
+                <img className="gif" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1694681178/aviones_corto_qua5lq.gif" alt="gif-72hrs" />
             </div>
           </div>
           <div>
             <h5>+10.000 Products</h5>
             <div className="gif">
-                <img className="gif" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1694681178/aviones_corto_qua5lq.gif" alt="gif-aviones" />
+                <img className="gif" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1694692311/ac934e2cd79ba0e763b91b116d74f605_htbnb5.gif" alt="gif-aviones" />
             </div>
           </div>
           <div>

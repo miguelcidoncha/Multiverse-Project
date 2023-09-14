@@ -9,7 +9,7 @@ Multiverse is an e-commerce website designed to effectively sell merchandise pro
 
 ## Screenshots 📷
 
-<img src="images/Home.png" width="auto" height="200"><img src="images/Home2.jpeg" width="auto" height="200"><img src="images/Home3.jpeg" width="auto" height="200"><img src="images/FigAcc.jpeg" width="auto" height="200"><img src="images/Funko.jpeg" width="auto" height="200"><img src="images/Poster.jpeg" width="auto" height="200"><img src="images/Shirts.jpeg" width="auto" height="200"><img src="images/Login.jpeg" width="auto" height="200"><img src="images/Chart.jpeg" width="auto" height="200">
+<img src="images/Home.png" width="auto" height="150"><img src="images/Home2.jpeg" width="auto" height="150"><img src="images/Home3.jpeg" width="auto" height="150"><img src="images/FigAcc.jpeg" width="auto" height="150"><img src="images/Funko.jpeg" width="auto" height="150"><img src="images/Poster.jpeg" width="auto" height="150"><img src="images/Shirts.jpeg" width="auto" height="150"><img src="images/Login.jpeg" width="auto" height="150"><img src="images/Chart.jpeg" width="auto" height="150">
 
 
 ## Stacks 🖥️
@@ -65,7 +65,7 @@ Multiverse is an e-commerce website designed to effectively sell merchandise pro
 
 ## Tests Screenshots ✔️
 
-<img src="images/Test Carousel.png" width="auto" height="200"><img src="images/Test Footer.png" width="auto" height="200"><img src="images/Test Header.png" width="auto" height="200"><img src="images/Test Nav.png" width="auto" height="200"><img src="images/Test login.png" width="auto" height="200"><img src="images/Test.png" width="auto" height="200">
+<img src="images/Test Carousel.png" width="auto" height="50"><img src="images/Test Footer.png" width="auto" height="50"><img src="images/Test Header.png" width="auto" height="50"><img src="images/Test Nav.png" width="auto" height="50"><img src="images/Test login.png" width="auto" height="50"><img src="images/Test.png" width="auto" height="200">
 
 ## Installation Process ⬆️
 

@@ -7,13 +7,9 @@
 
 Multiverse is an e-commerce website designed to effectively sell merchandise products and provide customers with a satisfying shopping experience. It's a design and development project with a free theme in which we will be working on both the Front-end and Back-end. This repository contains the Front-end files along with the development of a fake API that allows us to work on the application without relying on real data or external system connections.
 
-## Screenshots (Coming Soon) 📷
+## Screenshots 📷
 
-**We're working on it!** <br>
-
-Screen images will be available here shortly. Stay tuned! <br>
-
-<img src="Campturas BootCamp/Captura de pantalla 2023-08-07 091818.png" width="250" height="200">
+<img src="images/Home.png" width="250" height="200"><img src="images/Home2.jpeg" width="250" height="200"><img src="images/Home3.jpeg" width="250" height="200"><img src="images/FigAcc.jpeg" width="250" height="200"><img src="images/Funko.jpeg" width="250" height="200"><img src="images/Poster.jpeg" width="250" height="200"><img src="images/Shirts.jpeg" width="250" height="200"><img src="images/Login.jpeg" width="250" height="200"><img src="images/Chart.jpeg" width="250" height="200">
 
 
 ## Stacks 🖥️

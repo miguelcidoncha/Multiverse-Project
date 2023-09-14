@@ -63,9 +63,9 @@ Multiverse is an e-commerce website designed to effectively sell merchandise pro
 
 <img src="images/Jestt.png" width="100" height="auto"><img src="images/Testing Library.png" width="90" height="30"><img src="images/Vitest.png" width="80" height="30">
 
-## Tests Screenshots ✔️
+## Test Screenshot ✔️
 
-<img src="images/Test Carousel.png" width="auto" height="50"><img src="images/Test Footer.png" width="auto" height="50"><img src="images/Test Header.png" width="auto" height="50"><img src="images/Test Nav.png" width="auto" height="50"><img src="images/Test login.png" width="auto" height="50"><img src="images/Test.png" width="auto" height="200">
+<img src="images/Test.png" width="auto" height="300">
 
 ## Installation Process ⬆️
 

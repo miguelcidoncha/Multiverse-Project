@@ -14,7 +14,7 @@ import Swal from "sweetalert2";
 import "./Register.css";
 
 const Register = () => {
-  const URL = "http://localhost:3000/products";
+  const URL = "https://localhost:7106";
 
   const getData = async () => {
     const response = await axios.get(URL);
@@ -154,7 +154,7 @@ const Register = () => {
             );
           }
         } else {
-          const response = await axios.post(URL, dataModal);
+          const response = await axios.post(URL + "/Product/Post", dataModal);
           if (response.status === 201) {
             Swal.fire(
               "Save!",

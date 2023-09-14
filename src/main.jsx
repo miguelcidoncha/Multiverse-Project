@@ -11,10 +11,10 @@ import Home from './views/Home/Home';
 import Cart from './components/Cart/Cart';
 import Footer from './components/Footer/Footer.jsx';
 import Comics from './views/comics/comics';
-import Figures from './views/figures/figures';
+import Figures from './views/figures/figures'; // Importa el componente Figures
 import Funkos from './views/funkopops/funkos'; 
 import Posters from './views/posters/poster';
-import Shirts from './views/shirts/shirts';
+import Shirts from './views/shirts/shirts'; // Importa el componente Shirts
 import Loginview from './views/login/login';
 
 const Main = () => {
@@ -22,6 +22,17 @@ const Main = () => {
 
   const addToCart = (product) => {
     setCart([...cart, product]);
+  };
+
+  const removeFromCart = (index) => {
+    // Crea una copia del carrito actual
+    const updatedCart = [...cart];
+
+    // Elimina el elemento en el índice especificado
+    updatedCart.splice(index, 1);
+
+    // Actualiza el estado del carrito
+    setCart(updatedCart);
   };
 
   return (
@@ -33,15 +44,25 @@ const Main = () => {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Loginview />} />
-          <Route path="/carrito" element={<Cart cart={cart} />} />
-          <Route path="/comics" element={<Comics />} />
-          <Route path="/figuras" element={<Figures />} />
+          
+          <Route path="/carrito" element={<Cart cart={cart} setCart={setCart} removeFromCart={removeFromCart} />} />
+          <Route path="/comics" element={<Comics addToCart={addToCart} cart={cart} />} />
+          <Route
+            path="/figuras"
+            element={<Figures addToCart={addToCart} cart={cart} />}
+          />
           <Route
             path="/funkos"
-            element={<Funkos addToCart={addToCart} cart={cart} />} // Pasar cart como prop
+            element={<Funkos addToCart={addToCart} cart={cart} />}
           />
-          <Route path="/posters" element={<Posters />} />
-          <Route path="/shirts" element={<Shirts />} />
+          <Route
+            path="/posters"
+            element={<Posters addToCart={addToCart} />}
+          />
+          <Route
+            path="/shirts"
+            element={<Shirts addToCart={addToCart} />}
+          />
         </Routes>
       </div>
       <Footer />
@@ -51,9 +72,3 @@ const Main = () => {
 
 const root = createRoot(document.getElementById('root'));
 root.render(<Main />);
-
-
-
-
-
-

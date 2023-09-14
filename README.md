@@ -24,6 +24,7 @@ Screen images will be available here shortly. Stay tuned! <br>
 ● JavaScript <br>
 ● CSS <br>
 ● HTML <br>
+● Cloudinary <br>
 ● GitHub <br>
 ● Trello <br>
 ● Figma <br>

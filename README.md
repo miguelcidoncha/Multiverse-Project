@@ -33,7 +33,7 @@ Screen images will be available here shortly. Stay tuned! <br>
 
 ## Libraries 📚
 
-<img src="images/ReactBoostrap.png" width="100" height="auto"><img src="images/Formik.png" width="100" height="30"><img src="images/PrimeReact.png" width="100" height="auto"><img src="images/React Hook Form.png" width="100" height="25"><img src="images/React Router.png" width="100" height="25"><img src="images/Sweet Alert.png" width="100" height="30"><img src="images/Swiper.png" width="100" height="auto"><img src="images/YUP.png" width="100" height="30">
+<img src="images/ReactBoostrap.png" width="100" height="auto"><img src="images/Formik.png" width="100" height="30"><img src="images/PrimeReact.png" width="100" height="auto"><img src="images/React Hook Form.png" width="100" height="25"><img src="images/React Router.png" width="100" height="25"><img src="images/Sweet Alert.png" width="100" height="30"><img src="images/Swiper.png" width="100" height="auto"><img src="images/YUP.png" width="100" height="30"><img src="images/Cloudinary.png" width="100" height="auto">
 
 ## Technologies and Tools 🔨
 <div>  

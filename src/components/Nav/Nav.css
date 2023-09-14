@@ -8,14 +8,6 @@
 
 .link{
   margin: 1px;
-  border-top: 1px black solid;
-  border-right:1px black solid;
-  /* border-bottom: 1px black solid; */
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-  /* border-bottom-right-radius: 8px; */
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
   
 }
 

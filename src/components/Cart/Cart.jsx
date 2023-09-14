@@ -52,6 +52,7 @@
 
 
 import React from 'react';
+import './Cart.css';
 
 const Cart = ({ cart, setCart }) => {
   const removeItemFromCart = (index) => {
@@ -62,7 +63,7 @@ const Cart = ({ cart, setCart }) => {
 
   return (
     <div>
-      <h2>Shopping Cart</h2>
+      <h2 className='shopping'>Shopping Cart</h2>
       <table className="table">
         <thead>
           <tr>

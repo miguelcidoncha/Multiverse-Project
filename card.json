@@ -54,20 +54,23 @@
     {
       "type": "Poster",
       "name": "jav",
+      "description": "Poster De Harry Potter",
       "price": "10",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508183/Harry_Potter_etor7k.png",
       "id": 19
     },
     {
       "type": "Poster",
-      "name": "vea",
+      "name": "Wanted",
+      "description": "Wanted Harry Potter",
       "price": "1",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508183/Harry_ggwqqo.png",
       "id": 20
     },
     {
       "type": "Poster",
-      "name": "wgtg",
+      "name": "Spiderman",
+      "description": "Poster De Spiderman",
       "price": "2",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508318/Spiderman_ti3mtw.png",
       "id": 25
@@ -186,70 +189,80 @@
     },
     {
       "type": "Shirt",
-      "name": "Mensaje ",
+      "name": "Koala Food",
+      "description": "Shirt Koala",
       "price": "3",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436933/images-removebg-preview_hmtllo.png",
       "id": 41
     },
     {
       "type": "Shirt",
-      "name": "Mensaje ",
+      "name": "Anime",
+      "description": "Shirt Anime",
       "price": "5",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436933/cami_espiritu-removebg-preview_nubxmt.png",
       "id": 42
     },
     {
       "type": "Shirt",
-      "name": "Mensaje ",
+      "name": "One Piece",
+      "description": "Shirt One Piece",
       "price": "11",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436932/Camiseta_One_Piece_gtslii.png",
       "id": 43
     },
     {
       "type": "Shirt",
-      "name": "Mensaje ",
+      "name": "Kawai Eyes ",
+      "description": "Shirt Kawai",
       "price": "1",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436932/cara-kawaii-camiseta-mujer-removebg-preview_he42ea.png",
       "id": 44
     },
     {
       "type": "Shirt",
-      "name": "Mensaje ",
+      "name": "Goku DBZ",
+      "description": "Shirt Goku Dbz",
       "price": "2",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436932/cami_goku-removebg-preview_qtqzig.png",
       "id": 45
     },
     {
       "type": "Shirt",
-      "name": "Mensaje ",
+      "name": "Jack Skeleton",
+      "description": "Shirt Jack",
       "price": "1",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694436932/cami_jack-removebg-preview_okmluu.png",
       "id": 46
     },
     {
       "type": "Poster",
-      "name": "Mensaje ",
+      "name": "Civil War",
+      "description": "Poster Civil War",
       "price": "1",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508589/Civil_War_jyvaxc.png",
       "id": 47
     },
     {
       "type": "Poster",
-      "name": "Mensaje ",
+      "name": "Catman",
+      "description": "Poster Catman",
       "price": "2",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508592/The_Batman_d5u0xm.png",
       "id": 48
     },
     {
       "type": "Poster",
-      "name": "Mensaje ",
+      "name": "Witcher",
+      "description": "Poster Witcher",
       "price": "1",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508594/The_Witcher_xo1zqx.png",
       "id": 49
     },
     {
       "type": "Poster",
-      "name": "Mensaje ",
+      "name": "Guason",
+      "description": "Poster Guason / Batman",
       "price": "4",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1694508596/Joker_oprgym.png",
       "id": 50

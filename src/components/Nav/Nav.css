@@ -18,3 +18,12 @@
 .link.active {
     color: red; /* Cambia el color del enlace activo a rojo */
   }
+
+
+/* 
+  @media (max-width: 415px) {
+   
+    .navbar-toggler {
+    justify-content:center;
+}
+  } */

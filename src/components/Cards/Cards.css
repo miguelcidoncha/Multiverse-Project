@@ -1,5 +1,4 @@
 .card {
-  /* font-family:'arcade' ; */
   color: white;
   width: 230px;
   height: 380px;
@@ -62,3 +61,11 @@
     font-weight:bold; /* Grosor de fuente de la etiqueta */
     border-radius: 90px 90px 90px 0px; /* Borde redondeado de la etiqueta */
   }
+
+  @media (max-width: 415px) {
+   
+    .card {
+      width: 30px;
+      height: 30px;
+  }
+}

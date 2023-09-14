@@ -92,7 +92,7 @@ const Cart = ({ cart, removeFromCart }) => {
         Total Price: {totalPrice}€
       </p>
       <button className="btn btn-success mt-5 " onClick={() => { /* Agrega la función de pago aquí si es necesario */ }}>
-      Pagar ahora
+      Pay Now
     </button>
       </div>
       

@@ -3,15 +3,12 @@
   src: url(/fonts/arcade-ka1.ttf) format('truetype');
 }
 
-
-
-
 .background-body{
   border-left: 9px black solid;
   border-right: 9px black solid;
   background-image: url(https://res.cloudinary.com/dbvqy3wft/image/upload/v1692951841/Background-Black-white_tn8o2f.jpg);
   background-size: cover;
-  height: 100rem;
+  height: 105rem;
 }
 
 .subtitle{
@@ -40,10 +37,12 @@
 }
 
 #add{
-  height: 200px;
+  /* height: 200px; */
+  height: auto;
   width: 100%;
   background-color: white;
   margin-top: 40px;
+  padding: 2px;
   font-family: fantasy;
 }
 
@@ -53,8 +52,10 @@
 }
 
 #advenger{
+  /* height: auto; */
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   margin: 35px;
 }
 
@@ -62,4 +63,11 @@
   display: flex;
   margin: 10px;
   justify-content: space-around;
+}
+
+.gif {
+  width: 175px; /* Tamaño deseado en píxeles */
+  height: 160px; /* Tamaño deseado en píxeles */
+  /* Ajusta el ancho y el alto según tus necesidades */
+  /* Añade otros estilos si es necesario */
 }

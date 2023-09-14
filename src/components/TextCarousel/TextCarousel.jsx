@@ -11,7 +11,8 @@ const TextCarousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 10000, // Velocidad de desplazamiento
-    autoplaySpeed: 1000, // Tiempo de espera entre desplazamientos
+    autoplaySpeed: 2000, // Tiempo de espera entre desplazamientos
+    pauseOnHover: false, // Evita que se detenga al pasar el mouse sobre el carrusel
     arrows: false, // Opcional: para ocultar las flechas de navegación
   };
 

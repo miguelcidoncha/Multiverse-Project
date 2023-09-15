@@ -17,7 +17,7 @@ const Register = () => {
   const URL = "https://localhost:7106";
 
   const getData = async () => {
-    const response = await axios.get(URL);
+    const response = await axios.get(URL+ "/Product/GetProducts");
     return response;
   };
 
@@ -30,6 +30,7 @@ const Register = () => {
     description: "",
     price: "",
     image: "",
+    id:""
   });
 
   const [editProductId, setEditProductId] = useState(null);
@@ -42,7 +43,7 @@ const Register = () => {
   const handleOpenModal = () => {
     if (editProductId !== null) {
       const productToEdit = list.find(
-        (product) => product.id === editProductId
+        (product) => product.idProduct === editProductId
       );
       if (productToEdit) {
         setDataModal({
@@ -73,11 +74,12 @@ const Register = () => {
   };
 
   const handleEdit = (product) => {
-    setEditProductId(product.id);
+    setEditProductId(product.idProduct);
     handleOpenModal();
   };
 
-  const handleDelete = async (productId, productName) => {
+  const handleDelete = async (idProduct, productName) => {
+    // const handleDelete = async (productId) => {
     const confirmation = await Swal.fire({
       title: `¿Are you sure to remove ${productName}?`,
       text: "This action cannot be undone.",
@@ -91,12 +93,19 @@ const Register = () => {
 
     if (confirmation.isConfirmed) {
       try {
-        const response = await axios.delete(`${URL}/${productId}`);
+        //const response = await axios.delete(`${URL} +"/Product/Delete?productId="${productId}`);
+        // https://localhost:7106/Product/Delete?productId=10
+
+        //const response = await axios.delete(`${URL}/Product/Delete?productId=${productId}`);
+        // const response = await axios.delete(URL + "/Product/Delete?productId=${productId}");
+        const response = await axios.delete(`${URL}/Product/Delete?idProduct=${idProduct}`);
+
+
 
         if (response.status === 200) {
           Swal.fire(
             "Delete!",
-            `The record with the ID was successfully deleted: "${productId}".`,
+            `The record with the ID was successfully deleted: "${idProduct}".`,
             "success"
           );
           setUpdateList(!updateList);
@@ -116,7 +125,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const actionMessage = editProductId ? "Update" : "keep";
+    const actionMessage = editProductId ? "Update" : "save";
 
     const confirmation = await Swal.fire({
       title: `¿Are you sure to  ${actionMessage} this product?`,
@@ -134,8 +143,8 @@ const Register = () => {
     if (confirmation.isConfirmed) {
       try {
         if (editProductId !== null) {
-          const response = await axios.put(
-            `${URL}/${editProductId}`,
+          const response = await axios.put(`${URL}/Product/Put/${editProductId}`,
+
             dataModal
           );
           if (response.status === 200) {
@@ -155,7 +164,7 @@ const Register = () => {
           }
         } else {
           const response = await axios.post(URL + "/Product/Post", dataModal);
-          if (response.status === 201) {
+          if (response.status === 200) {
             Swal.fire(
               "Save!",
               `The new product has been successfully added!`,
@@ -182,6 +191,7 @@ const Register = () => {
       setList(response.data);
     });
   }, [updateList]);
+  console.log(list);
 
   useEffect(() => {
     if (editProductId !== null) {
@@ -203,7 +213,7 @@ const Register = () => {
   return (
     <Container id="container1" className="mb-5 mt-5">
       <Button id="buttom-add-new" onClick={handleOpenModal}>
-        Add new Product:
+        Add New Product
       </Button>
 
       <Row>
@@ -234,7 +244,9 @@ const Register = () => {
                 <div id="mix">
                   <button
                     className="btn btn-danger me-3"
-                    onClick={() => handleDelete(product.id, product.name)}
+                    // onClick={() => handleDelete(product.id, product.name)}
+                    onClick={() => handleDelete(product.idProduct, product.name)}
+                    
                   >
                     🗑️
                   </button>
@@ -268,11 +280,11 @@ const Register = () => {
                 value={dataModal.type}
               >
                 <option value="">Select an option:</option>
-                <option value="Funko">Funko Pop</option>
-                <option value="Shirt">Shirt</option>
-                <option value="Figure">Figure</option>
-                <option value="Poster">Poster</option>
-                <option value="Comic">Comic</option>
+                <option value="Funko Pops">Funko Pop</option>
+                <option value="Shirts">Shirt</option>
+                <option value="Figures">Figure</option>
+                <option value="Posters">Poster</option>
+                <option value="Comics">Comic</option>
               </select>
             </Form.Group>
 
@@ -330,7 +342,7 @@ const Register = () => {
               Cancel
             </button>
             <button className="btn btn-success mb-3" type="submit">
-              {editProductId ? "Update" : "Keep"}
+              {editProductId ? "Update" : "Save"}
             </button>
           </Modal.Footer>
         </Form>

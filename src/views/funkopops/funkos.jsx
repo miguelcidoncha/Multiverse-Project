@@ -7,7 +7,7 @@ const Funkos = ({ addToCart, cart }) => {
   const [funkos, setFunkos] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/products?type=Funko')
+    axios.get('https://localhost:7106/Product/GetProductsByCategoryId?categoryId=5')
       .then((response) => {
         setFunkos(response.data);
       })

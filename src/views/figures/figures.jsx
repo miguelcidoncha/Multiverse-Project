@@ -10,7 +10,7 @@ const Figures = ({ addToCart }) => {
 
   useEffect(() => {
     // Realiza una solicitud para obtener los productos de la categoría "Figura" desde tu API.
-    axios.get('http://localhost:3000/products?type=Figure')
+    axios.get('https://localhost:7106/Product/GetProductsByCategoryId?categoryId=4')
       .then((response) => {
         setFigures(response.data);
       })

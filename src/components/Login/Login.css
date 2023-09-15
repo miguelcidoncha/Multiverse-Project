@@ -5,6 +5,9 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
+    /* background-color:white; */
+    /* background-color: #fff; */
    
 }
 
@@ -21,6 +24,9 @@
     /* Ancho máximo del formulario */
     margin: 10 20px;
     /* Margen en los lados para separar las columnas */
+    border-top: 3px #0D7EFF solid;
+    /* border-right: 2px #0D7EFF solid; */
+    border-bottom: 3px #0D7EFF solid;
 }
 
 /* Estilos para el título */

@@ -37,9 +37,11 @@ const Main = () => {
 
   return (
     <BrowserRouter>
-      <Header />
-      <NavbarView />
-      <div className="content">
+      <div className="scroll">
+        <Header />
+        <NavbarView />
+
+        <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
@@ -65,10 +67,13 @@ const Main = () => {
           />
         </Routes>
       </div>
-      <Footer />
+        </div>
+        <Footer />
+   
+      
     </BrowserRouter>
   );
 };
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById("root"));
 root.render(<Main />);

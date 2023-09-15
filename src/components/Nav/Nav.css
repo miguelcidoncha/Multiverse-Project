@@ -6,6 +6,11 @@
   color: black;
 }
 
+.link{
+  margin: 1px;
+  
+}
+
 .link:hover{
     transition-property: background-color, transform;
     transition-duration: 0.6s;

@@ -1,21 +1,3 @@
-/* body{
-  cursor: url(https://www.emp.co.uk/on/demandware.static/Sites-GLB-Site/-/en_GB/v1694394546992/images/hand.cur), pointer;
-}
-
-.content{
-  display: flex;
-  flex-direction: column;
-  min-height: 80vh;
-}
-
-main {
-  flex-grow: 1;
-} */
-
-
-
-
-/* Estilos generales para pantallas grandes */
 .body {
   cursor: url(https://www.emp.co.uk/on/demandware.static/Sites-GLB-Site/-/en_GB/v1694394546992/images/hand.cur), pointer;
 }

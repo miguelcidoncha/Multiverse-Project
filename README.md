@@ -86,3 +86,8 @@ Coming soon, we will continue developing the Full Stack project with the reposit
 | [<img src="https://avatars.githubusercontent.com/u/132559559?v=4" width=100><br><sub>Laura Barrero</sub>](https://github.com/laurabarrerogonzalez) | [<img src="https://avatars.githubusercontent.com/u/132651136?v=4" width=100><br><sub>Rebeca Poma</sub>](https://github.com/rebecapoma6) | [<img src="https://avatars.githubusercontent.com/u/132766257?v=4" width=100><br><sub>Javier Serrano</sub>](https://github.com/JaviSeC) | [<img src="https://avatars.githubusercontent.com/u/132567398?v=4" width=100><br><sub>Miguel Cidoncha</sub>](https://github.com/miguelcidoncha) |
 | :---: | :---: | :---: | :---: |
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+comando para abrir el local host:     json-server --watch card.json 

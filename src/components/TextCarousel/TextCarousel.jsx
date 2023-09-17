@@ -17,10 +17,10 @@ const TextCarousel = () => {
   };
 
   const textItems = [
-    "Descubre nuestros Increibles productos Friki...!",
-    "Te Diste cuenta que necesitabas todo..?",
-    "Pues facil, ¡COMPRALO TODO !!!",
-    // Agrega más textos aquí
+    "Discover our amazing freaky products...!",
+    "Did you realise that you needed everything...?",
+    "Well, easy, BUY IT ALL !!!!",
+   
   ];
 
   return (

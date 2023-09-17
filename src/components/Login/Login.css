@@ -70,7 +70,7 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url(https://www.emp.co.uk/on/demandware.static/Sites-GLB-Site/-/en_GB/v1694394546992/images/hand.cur), pointer;
     width: 100%;
     transition: background-color 0.3s;
 }

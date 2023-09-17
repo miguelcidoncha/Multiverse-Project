@@ -58,7 +58,7 @@ align-items: center;
 .add-button {
   border: none;
   background-color: transparent;
-  cursor: pointer;
+  cursor: url(https://www.emp.co.uk/on/demandware.static/Sites-GLB-Site/-/en_GB/v1694394546992/images/hand.cur), pointer;
   width: 40px;
   height: 40px;
   border-radius: 50%;

@@ -32,19 +32,18 @@ align-items: center;
 }
 
 .card-customer {
-  width: 20px; /* Tamaño cuadrado */
-  height: 520px; /* Tamaño cuadrado */
+  width: 20px; 
+  height: 520px; 
   border: 1px solid #000000;
   padding: 10px;
   background-color: #ffffff;
-  display: flex; /* Activa el flexbox para alinear los elementos internos */
-  flex-direction: column; /* Alinea los elementos en columna */
-  justify-content: space-between; /* Espacio uniforme entre los elementos */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
   text-align: center;
   margin-top: 5px;
 }
 .card-customer-group {
-  /* display: flex; */
   margin: 1px;
 }
 
@@ -59,7 +58,7 @@ align-items: center;
 .add-button {
   border: none;
   background-color: transparent;
-  cursor: pointer;
+  cursor: url(https://www.emp.co.uk/on/demandware.static/Sites-GLB-Site/-/en_GB/v1694394546992/images/hand.cur), pointer;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -73,13 +72,7 @@ align-items: center;
   background-color: #ccc;
 }
   
-.card-img-top{
-    
-      width: 115px;
-      height: 50px;
-      justify-items: center;
-      margin-left: 30px;
-  }
+
 
 .list-group-item {
  padding: 0px; 
@@ -87,9 +80,7 @@ align-items: center;
 }
 
 .btn-danger {
-  /* margin:auto; */
   justify-content: center;
-  /* text-align: center; */
   align-items: center;
 }
 

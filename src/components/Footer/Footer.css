@@ -12,10 +12,10 @@
   border: solid 9px black;
   height: 115px;
   padding: 60px;
-  position:relative; /* Establece una posición absoluta con respecto al contenedor principal. */
+  /* position:relative; Establece una posición absoluta con respecto al contenedor principal. */
   bottom: 0; /* Coloca el footer en la parte inferior del contenedor. */
   width: 100%; /* Asegura que el footer tenga el ancho completo del contenedor. */
-  
+  /* margin-top: 10rem; */
   /* height: 115px;
     padding: 60px;
     margin-top: auto; */

@@ -11,10 +11,10 @@ import Home from './views/Home/Home';
 import Cart from './components/Cart/Cart';
 import Footer from './components/Footer/Footer.jsx';
 import Comics from './views/comics/comics';
-import Figures from './views/figures/figures'; // Importa el componente Figures
+import Figures from './views/figures/figures'; 
 import Funkos from './views/funkopops/funkos'; 
 import Posters from './views/posters/poster';
-import Shirts from './views/shirts/shirts'; // Importa el componente Shirts
+import Shirts from './views/shirts/shirts'; 
 import Loginview from './views/login/login';
 
 const Main = () => {
@@ -25,21 +25,22 @@ const Main = () => {
   };
 
   const removeFromCart = (index) => {
-    // Crea una copia del carrito actual
     const updatedCart = [...cart];
 
-    // Elimina el elemento en el índice especificado
+    
     updatedCart.splice(index, 1);
 
-    // Actualiza el estado del carrito
+  
     setCart(updatedCart);
   };
 
   return (
     <BrowserRouter>
-      <Header />
-      <NavbarView />
-      <div className="content">
+      <div className="scroll">
+        <Header />
+        <NavbarView />
+
+        <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
@@ -65,10 +66,13 @@ const Main = () => {
           />
         </Routes>
       </div>
-      <Footer />
+        </div>
+        <Footer />
+   
+      
     </BrowserRouter>
   );
 };
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById("root"));
 root.render(<Main />);

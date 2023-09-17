@@ -22,7 +22,7 @@
   border: none;
   border-radius: 8px;
   box-shadow: 2px 2px 4px rgba(153, 152, 152, 0.4); /* Aquí está la sombra */
-  cursor: pointer;
+  cursor: url(https://www.emp.co.uk/on/demandware.static/Sites-GLB-Site/-/en_GB/v1694394546992/images/hand.cur), pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 

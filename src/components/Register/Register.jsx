@@ -79,7 +79,7 @@ const Register = () => {
   };
 
   const handleDelete = async (idProduct, productName) => {
-    // const handleDelete = async (productId) => {
+   
     const confirmation = await Swal.fire({
       title: `¿Are you sure to remove ${productName}?`,
       text: "This action cannot be undone.",
@@ -244,7 +244,6 @@ const Register = () => {
                 <div id="mix">
                   <button
                     className="btn btn-danger me-3"
-                    // onClick={() => handleDelete(product.id, product.name)}
                     onClick={() => handleDelete(product.idProduct, product.name)}
                     
                   >

@@ -41,6 +41,7 @@ const Comics = ({ addToCart, cart }) => {
               <div className="card-body">
                 <h5 className="card1-title text-center">{comic.type}</h5>
                 <p className="card1-text text-center"> {comic.name}</p>
+                <p className="card1-text text-center"> {comic.description}</p>
                 <p className="card1-text text-center"> {comic.price}€</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(comic)}>Add to Cart</button>

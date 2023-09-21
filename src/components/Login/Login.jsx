@@ -2,10 +2,6 @@ import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './Login.css'; // Asegúrate de tener el archivo CSS correspondiente
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/Laura
 const Login = () => {
     const initialValues = {
         userName: '',
@@ -43,10 +39,6 @@ const Login = () => {
                                 <Field type="text" id="userName" name="userName" />
                                 <ErrorMessage name="userName" component="div" className="error" />
                             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/Laura
                             <div className="form-group">
                                 <label htmlFor="email">Email</label>
                                 <Field type="email" id="email" name="email" />
@@ -70,9 +62,4 @@ const Login = () => {
         </div>
     );
 };
-<<<<<<< HEAD
-
 export default Login;
-=======
-export default Login;
->>>>>>> origin/Laura

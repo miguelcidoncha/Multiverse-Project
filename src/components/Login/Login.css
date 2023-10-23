@@ -5,6 +5,9 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
+    /* background-color:white; */
+    /* background-color: #fff; */
    
 }
 
@@ -21,6 +24,9 @@
     /* Ancho máximo del formulario */
     margin: 10 20px;
     /* Margen en los lados para separar las columnas */
+    border-top: 3px #0D7EFF solid;
+    /* border-right: 2px #0D7EFF solid; */
+    border-bottom: 3px #0D7EFF solid;
 }
 
 /* Estilos para el título */
@@ -64,7 +70,7 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url(https://www.emp.co.uk/on/demandware.static/Sites-GLB-Site/-/en_GB/v1694394546992/images/hand.cur), pointer;
     width: 100%;
     transition: background-color 0.3s;
 }

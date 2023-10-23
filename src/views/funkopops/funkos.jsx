@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import '../funkopops/funkos.css';
 
 const Funkos = ({ addToCart, cart }) => {
   const [funkos, setFunkos] = useState([]);
@@ -40,8 +41,9 @@ const Funkos = ({ addToCart, cart }) => {
               <div className="card-body">
                 <h5 className="card-title text-center">{funko.type}</h5>
                 <p className="card-text text-center">{funko.name}</p>
+                <p className="card-text text-center">{funko.description}</p>
                 <p className="card-text text-center">{funko.price}€</p>
-                <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex justify-content-between align-items-center mt-2">
                   <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(funko)}>Add to cart</button>
                   <button
                     className="btn btn-link"

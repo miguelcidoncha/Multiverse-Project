@@ -30,16 +30,19 @@ const Posters = ({ addToCart }) => {
   };
 
   return (
-    <div className="container">
-      <div className="row row-cols-1 row-cols-md-4 g-2">
+    <div className="containerposter">
+      <div className="row row-cols-1 row-cols-md-10">
         {posters.map((poster, idx) => (
           <div key={poster.id} className="col">
-            <div className="card mb-3">
-              <img src={poster.image} alt={poster.type} className="card-img-top image-card" />
+            <div className="cardP">
+            {/* <div className='new-label'> NEW </div> */}
+              <img src={poster.image} alt={poster.type} className="cardP-img" />
               <div className="card-body">
-                <h5 className="card-title text-center">{poster.type}</h5>
-                <p className="card-text text-center">{poster.name}</p>
+                {/* <h6 className="card-title text-center">{poster.type}</h6> */}
+                <h2 className="card-text text-center">{poster.name}</h2>
                 <p className="card-text text-center">{poster.price}€</p>
+                <p className="card-text text-center">{poster.description}</p>
+                {/* <p className="card-text text-center">Brishante Poster de Venom </p> */}
                 <div className="d-flex justify-content-between align-items-center">
                   <button className="btn btn-primary btn-sm" onClick={() => handleAddToCart(poster)}>Add to cart</button>
                   <button

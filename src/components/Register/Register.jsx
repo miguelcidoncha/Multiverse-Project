@@ -17,7 +17,7 @@ const Register = () => {
   const URL = "https://localhost:7106";
 
   const getData = async () => {
-    const response = await axios.get(URL+ "/Product/GetProducts");
+    const response = await axios.get(URL + "/Product/GetProducts");
     return response;
   };
 
@@ -30,7 +30,7 @@ const Register = () => {
     description: "",
     price: "",
     image: "",
-    id:""
+    id: ""
   });
 
   const [editProductId, setEditProductId] = useState(null);
@@ -79,7 +79,7 @@ const Register = () => {
   };
 
   const handleDelete = async (idProduct, productName) => {
-   
+
     const confirmation = await Swal.fire({
       title: `¿Are you sure to remove ${productName}?`,
       text: "This action cannot be undone.",
@@ -135,9 +135,8 @@ const Register = () => {
       confirmButtonColor: "#007BFF",
       cancelButtonColor: "#aa8caf",
       cancelButtonText: "Cancel",
-      confirmButtonText: `Yes, ${
-        actionMessage.charAt(0).toUpperCase() + actionMessage.slice(1)
-      }.`,
+      confirmButtonText: `Yes, ${actionMessage.charAt(0).toUpperCase() + actionMessage.slice(1)
+        }.`,
     });
 
     if (confirmation.isConfirmed) {
@@ -245,7 +244,7 @@ const Register = () => {
                   <button
                     className="btn btn-danger me-3"
                     onClick={() => handleDelete(product.idProduct, product.name)}
-                    
+
                   >
                     🗑️
                   </button>
